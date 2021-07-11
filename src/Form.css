@@ -1,0 +1,285 @@
+
+  
+  .HideDistrict{
+  display: none;;
+  }
+  
+  input#image {
+  line-height: 32px;
+  padding-left: initial;
+  }
+  
+  #dvPreview
+  {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
+    max-height: 400px;
+    max-width: 400px;
+  }
+  
+  .form {
+    padding: 120px 0; }
+    .form .sign-up-step {
+      -webkit-box-shadow: 0px 0px 11px 7px rgba(56, 56, 56, 0.08);
+      box-shadow: 0px 0px 11px 7px rgba(56, 56, 56, 0.08);
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 30px; }
+      .form .sign-up-step ul {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex; }
+        .form .sign-up-step ul li {
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          padding: 0 30px;
+          border-right: 1px solid rgba(56, 56, 56, 0.3);
+          border-top: 1px solid rgba(56, 56, 56, 0.2);
+          border-bottom: 1px solid rgba(56, 56, 56, 0.2);
+          height: 50px;
+          line-height: 48px;
+          border-radius: 0 50px 50px 0;
+          margin-left: -25px;
+          padding-left: 45px;
+          -webkit-box-align: baseline;
+          -ms-flex-align: baseline;
+          align-items: baseline;
+          -webkit-transition: all 0.3s ease-in;
+          -moz-transition: all 0.3s ease-in;
+          -o-transition: all 0.3s ease-in;
+          transition: all 0.3s ease-in;
+          position: relative;
+          z-index: 2;
+          overflow: hidden; }
+          .form .sign-up-step ul li:after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background: -webkit-linear-gradient(290deg, #f81b64, #c40c49);
+            background: -o-linear-gradient(290deg, #f81b64, #c40c49);
+            background: linear-gradient(160deg, #f81b64, #c40c49);
+            z-index: -1;
+            -webkit-transition: all 0.3s ease-in;
+            -moz-transition: all 0.3s ease-in;
+            -o-transition: all 0.3s ease-in;
+            transition: all 0.3s ease-in;
+            border-radius: 0 50px 50px 0; }
+          .form .sign-up-step ul li.active {
+            border-color: #fff; }
+            .form .sign-up-step ul li.active:after {
+              width: 100%; }
+            .form .sign-up-step ul li.active span.text, .form .sign-up-step ul li.active span.icon {
+              color: #fff; }
+          .form .sign-up-step ul li:first-child {
+            padding-left: 25px;
+            z-index: 5;
+            border-radius: 10px 50px 50px 10px;
+            border-left: 1px solid rgba(56, 56, 56, 0.6);
+            margin-left: 0; }
+          .form .sign-up-step ul li:nth-child(2) {
+            z-index: 4; }
+          .form .sign-up-step ul li:nth-child(3) {
+            z-index: 3; }
+          .form .sign-up-step ul li:last-child {
+            z-index: 2; }
+            .form .sign-up-step ul li:last-child.active:after {
+              background: #79a125; }
+          .form .sign-up-step ul li span.icon {
+            margin-right: 10px;
+            color: rgba(56, 56, 56, 0.6); }
+            .form .sign-up-step ul li span.icon svg {
+              height: 22px;
+              width: auto;
+              font-size: auto; }
+          .form .sign-up-step ul li span.text {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(56, 56, 56, 0.8); }
+    .form .all-form {
+      -webkit-box-shadow: 0px 0px 11px 7px rgba(56, 56, 56, 0.08);
+      box-shadow: 0px 0px 11px 7px rgba(56, 56, 56, 0.08);
+      border-radius: 10px;
+      padding: 30px;
+      position: relative; }
+    .form .single-form {
+      display: none; }
+      .form .single-form.first-step {
+        display: block; }
+      .form .single-form form div {
+        position: relative; }
+      .form .single-form form label {
+        display: block;
+        padding-bottom: 6px;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #383838;
+        padding-top: 6px;
+        margin-bottom: 0;
+        position: absolute;
+        bottom: 7px;
+        left: 30px;
+        -webkit-transition: all 0.3s ease-in;
+        -moz-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in;
+        opacity: .5; }
+        .form .single-form form label.active {
+          font-size: 12px;
+          font-weight: 500;
+          opacity: 1;
+          bottom: 50px;
+          left: 0;
+          color: #f81b64; }
+      .form .single-form form input {
+        width: 100%;
+        height: 50px;
+        padding: 0 30px;
+        margin-top: 30px;
+        border: 1px solid rgba(56, 56, 56, 0.2);
+        border-radius: 5px;
+        -webkit-transition: all 0.3s ease-in;
+        -moz-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in; }
+        .form .single-form form input:focus {
+          border-color: rgba(248, 27, 100, 0.5); }
+  
+          .labelAlternative {
+            display: block;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: #383838;
+            margin-bottom: 0;
+            position: absolute;
+            bottom: 50px;
+            -webkit-transition: all 0.3s ease-in;
+            -moz-transition: all 0.3s ease-in;
+            -o-transition: all 0.3s ease-in;
+            transition: all 0.3s ease-in;
+            opacity: .5; }
+  
+          .form .single-form form option {
+        display: block;
+        padding-bottom: 6px;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #383838;
+        padding-top: 6px;
+        margin-bottom: 0;
+        position: absolute;
+        bottom: 7px;
+        left: 30px;
+        -webkit-transition: all 0.3s ease-in;
+        -moz-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in;
+        opacity: .5; }
+        .form .single-form form option.active {
+          font-size: 12px;
+          font-weight: 500;
+          opacity: 1;
+          bottom: 50px;
+          left: 0;
+          color: #f81b64; }
+      .form .single-form form select {
+        width: 100%;
+        height: 50px;
+        padding: 0 30px;
+        margin-top: 30px;
+        border: 1px solid rgba(56, 56, 56, 0.2);
+        border-radius: 5px;
+        -webkit-transition: all 0.3s ease-in;
+        -moz-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in; }
+        .form .single-form form select:focus {
+          border-color: rgba(248, 27, 100, 0.5); }
+  
+  
+      .form .single-form p {
+        font-size: 14px;
+        color: #383838;
+        opacity: .6;
+        margin-bottom: 0;
+        padding-top: 26px; }
+      .form .single-form .next {
+        margin-top: 25px;
+        border: none;
+        background: #f81b64;
+        height: 50px;
+        width: 150px;
+        color: #fff;
+        text-transform: uppercase;
+        border-radius: 5px;
+        font-weight: 500;
+        outline: none;
+        cursor: pointer;
+        -webkit-transition: all 0.3s ease-in;
+        -moz-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in; }
+        .form .single-form .next:hover {
+          background: #383838; }
+        .form .single-form .next.disabled {
+          cursor: not-allowed;
+          background: #ddd; }
+    .form .final-step {
+      text-align: center;
+      display: none;
+      padding: 120px 0;
+      border: 1px solid rgba(56, 56, 56, 0.2);
+      border-radius: 5px; }
+      .form .final-step .text {
+        display: block;
+        color: #79a125;
+        font-size: 34px;
+        margin-top: 17px;
+        margin-bottom: -13px; }
+      .form .final-step svg {
+        width: 100px;
+        display: inline-block; }
+      .form .final-step .path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0; }
+        .form .final-step .path.circle {
+          -webkit-animation: dash .9s ease-in-out;
+          animation: dash .9s ease-in-out; }
+        .form .final-step .path.line {
+          stroke-dashoffset: 1000;
+          -webkit-animation: dash .9s .35s ease-in-out forwards;
+          animation: dash .9s .35s ease-in-out forwards; }
+        .form .final-step .path.check {
+          stroke-dashoffset: -100;
+          -webkit-animation: dash-check .9s .35s ease-in-out forwards;
+          animation: dash-check .9s .35s ease-in-out forwards; }
+  
+  @-webkit-keyframes dash {
+    0% {
+      stroke-dashoffset: 1000; }
+    100% {
+      stroke-dashoffset: 0; } }
+  
+  @keyframes dash {
+    0% {
+      stroke-dashoffset: 1000; }
+    100% {
+      stroke-dashoffset: 0; } }
+  
+  @-webkit-keyframes dash-check {
+    0% {
+      stroke-dashoffset: -100; }
+    100% {
+      stroke-dashoffset: 900; } }
+  
+  @keyframes dash-check {
+    0% {
+      stroke-dashoffset: -100; }
+    100% {
+      stroke-dashoffset: 900; } }

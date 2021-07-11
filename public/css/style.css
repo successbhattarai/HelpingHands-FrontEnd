@@ -1,36 +1,35 @@
-@media only screen and (min-width: 1200px){
-section.section {
-    padding: 140px 0;
-}}
-@media only screen and (min-width: 992px){
-section.section {
-    padding: 120px 0;
-}}
-@media only screen and (min-width: 768px){
-section.section {
-    padding: 90px 0;
-}
-}
-.img--bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height:750px;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: top center;
-  object-position: top center;
-  font-family: "object-fit: cover; object-position: top center";
-  z-index: -1;
-}
+/*------------------------------------------------------------------
+[Master Stylesheet]
+Project:	Born to give
+Version:	1.1
+Last change:	12/15/15
+Author:	imithemes 
+-------------------------------------------------------------------*/
+/* Stylesheets and Google fonts import */
+@import url("font-awesome.css");
+@import url("line-icons.css");
+@import url("animations.css");
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Dosis);
 
-section.section {
-    position: relative;
-    z-index: 0;
-    padding: 70px 0;
-}
 
+/*------------------------------------------------------------------
+[Table of contents]
+
+0. CSS Reset
+1. Basic Styles
+2. Typography
+3. Margin Bottom Sets
+4. Padding Sets
+5. Spacers Sets
+6. Site Structure & Appearance
+7. Responsive Media Queries
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------*/
+/* 0. RESET */
+/*-------------------------------------------------------------------------------------------*/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -560,10 +559,10 @@ label {
 	background:rgba(255,255,255,.99);
 }
 .checkers-overlay{
-	background:url(./images/checkers.png) repeat;
+	background:url(../images/checkers.png) repeat;
 }
 .pattern-overlay{
-	background:url(./images/pattern.png) repeat;
+	background:url(../images/pattern.png) repeat;
 }
 .overlay-cover{
 	position:absolute;
@@ -886,7 +885,7 @@ html[xmlns] .slides {
 	z-index:1;
 	width:100%;
 	overflow:hidden;
-	background-image:url(./images/loader.gif) no-repeat center center;
+	background-image:url(../images/loader.gif) no-repeat center center;
 }
 .hero-slider .flex-viewport{
 	width:100%;
@@ -896,7 +895,6 @@ html[xmlns] .slides {
 }
 .hero-slider.flexslider ul.slides li{
 	width:100%;
-  display: block !important;
 	overflow:hidden;
 	position:relative;
 	background-attachment:scroll!important
@@ -1131,7 +1129,7 @@ html[xmlns] .slides {
 }
 .carousel-wrapper{
 	overflow:hidden;
-	background:url(./images/loader.gif) no-repeat center center;
+	background:url(../images/loader.gif) no-repeat center center;
 	min-height:150px;
 }
 .owl-carousel .owl-wrapper-outer{
