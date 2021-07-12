@@ -12,16 +12,16 @@ class FeatureLinks extends Component{
 render(){
 
 return(
-    <div class="featured-links row">
-    <a href="causes.html" class="featured-link col-md-4 col-sm-4">
+<div class="featured-links row">
+    <a href="causes" class="featured-link col-md-4 col-sm-4">
         <span>View our causes</span>
         <strong>Donate now</strong>
     </a>
-    <a href="careers.html" class="featured-link col-md-4 col-sm-4">
+    <a href="careers" class="featured-link col-md-4 col-sm-4">
         <span>Become a volunteer</span>
         <strong>Join us now</strong>
     </a>
-    <a href="events.html" class="featured-link col-md-4 col-sm-4">
+    <a href="events" class="featured-link col-md-4 col-sm-4">
         <span>View our events</span>
         <strong>Get involved</strong>
     </a>

@@ -878,6 +878,7 @@ html[xmlns] .slides {
 .flexslider .slides {
 	zoom: 1;
 	margin:0;
+	padding: 0%;
 	list-style-type:none;
 }  
 .hero-slider{
@@ -975,10 +976,24 @@ html[xmlns] .slides {
 .flexslider .flex-next:before{
   content: "\f105";
 }
-.hero-slider.flexslider .flex-prev, .hero-slider.flexslider .flex-next{
+.flexslider .flex-prev{
 	width:70px;
 	height:70px;
 	right:-70px;
+	margin-top:-35px;
+	-webkit-transition:all 0.3s ease 0.2s;
+	-moz-transition:all 0.3s ease 0.2s;
+	-ms-transition:all 0.3s ease 0.2s;
+	-o-transition:all 0.3s ease 0.2s;
+	transition:all 0.3s ease 0.1s;
+	font-size:30px;
+	line-height:70px;
+	display:block;
+	text-align:center;
+}
+.flexslider .flex-next{
+	width:70px;
+	height:70px;
 	margin-top:-35px;
 	-webkit-transition:all 0.3s ease 0.2s;
 	-moz-transition:all 0.3s ease 0.2s;
