@@ -119,7 +119,7 @@ class Register extends Component{
                       <label>I read and agree with the </label><a id="action-modal">terms of use.</a>
                   </div>
                   <div class="btn-container">
-                      <a class="btn-action" onClick={this.handleSubmitRegister}>Register Now</a>
+                      <a class="btn-action" id="register1" onClick={this.handleSubmitRegister}>Register Now</a>
                   </div>
                   <div class="account">
                       <p>Already have an Account ?</p>

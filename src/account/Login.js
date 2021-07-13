@@ -86,7 +86,7 @@ return(
                         <input class="input" placeholder="Password"  name="userPassword" id="userPassword" value={this.state.userPassword} onChange={this.handleStringChange} type="password"/>
                     </div>
                 </div>
-                <input type="submit" class="btn"  onClick={this.handleSubmitLogin} value="Login Now"/>
+                <input type="submit" class="btn" id="login1" onClick={this.handleSubmitLogin} value="Login Now"/>
                 <a class="forgot" href="forgotPassword">Forgot Your Password ?</a>
                
                
