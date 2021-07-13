@@ -18,7 +18,7 @@ if (localStorage.getItem('token')){
 var Heading =
 <div class="site-header-wrapper">
     
-    <header class="site-header">
+    <header class="site-header sticky">
         <div class="container">
             <div class="site-logo">
                 <a href="/" class="default-logo"><img src="images/logo2.png" alt="Logo" /></a>
@@ -160,7 +160,7 @@ else{
 var Heading =
 <div class="site-header-wrapper">
     
-    <header class="site-header">
+    <header class="site-header sticky">
         <div class="container">
             <div class="site-logo">
                 <a href="/" class="default-logo"><img src="images/logo2.png" alt="Logo" /></a>

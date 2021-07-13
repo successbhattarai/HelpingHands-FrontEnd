@@ -16,6 +16,8 @@ section.section {
 .error__title {
     font-size: 400px;
 }}
+
+
 .page-wrapper {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 auto;
@@ -1714,6 +1716,7 @@ body.boxed .body{
 }
 .featured-links .featured-link:nth-child(1){
 	background-color:rgba(0,0,0,.1);
+    margin-top: 120px;
 }
 .featured-links .featured-link:nth-child(2){
 	background-color:rgba(0,0,0,.2);
@@ -1775,7 +1778,6 @@ body.boxed .body{
 }
 .content{
 	padding:75px 0;
-	min-height:400px;
 }
 .home .content{
 	padding:0;
@@ -3733,7 +3735,7 @@ body.boxed .body{
 	}
 	.dd-menu{
 		position:absolute;
-		top:73px;
+		top:113px;
 		left:0;
 		float:none!important;
 		border-left:0;

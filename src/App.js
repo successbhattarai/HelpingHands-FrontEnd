@@ -1,21 +1,23 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Error from './pages/404';
-
 import './App.css';
 import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
+import Login from './account/Login';
+import Register from './account/Register';
+import Success from './account/Success';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
       <Route path='/' exact component={Home} />
-      <Route path='/login' exact component={Login} />
       <Route path='/register' exact component={Register} />
-      <Route path='/causes' exact component={Error} />
+      <Route path='/success' exact component={Success} />
+      <Route path='/login' exact component={Login} />
 
+      <Route path='/forgotPassword' exact component={Error} />
+      <Route path='/causes' exact component={Error} />
       <Route path='/careers' exact component={Error} />
       <Route path='/about' exact component={Error} />
       <Route path='/events' exact component={Error} />

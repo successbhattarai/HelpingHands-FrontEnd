@@ -22,7 +22,7 @@ return(
                             <div class="flex-caption-cell">
                                 <div class="flex-caption-text">
                                     <h2>Let your life be<br></br>an Inspiration</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectet<br></br>adipiscinge lit. Nam malesuada dapi<br></br>bus diam, ut fringilla purus..</p>
+                                    <p>When You Donate,<br></br> You Give Renewed Strength to Fight their Problems, <br></br>Bring Families Closer Together and Unite Entire Communities.</p>
                                     <a href="causes" class="btn btn-primary">Start with a little</a>
                                 </div>
                             </div>
