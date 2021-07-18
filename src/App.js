@@ -7,6 +7,7 @@ import Login from './account/Login';
 import Register from './account/Register';
 import Success from './account/Success';
 import Contact from './pages/Contact';
+import Team from './pages/Team';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path='/forgotPassword' exact component={Error} />
       <Route path='/causes' exact component={Error} />
       <Route path='/single-cause' exact component={Error} />
+      <Route path='/team' exact component={Team} />
       <Route path='/contact' exact component={Contact} />
       <Route path='/careers' exact component={Error} />
       <Route path='/about' exact component={Error} />

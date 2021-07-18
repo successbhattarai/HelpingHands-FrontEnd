@@ -98,7 +98,7 @@ return(
                                     <div class="form-group">
                                         <textarea cols="6" rows="8" name="userMessage" id="userMessage" value={this.state.userMessage} onChange={this.handleStringChange} class="form-control input-lg" placeholder="Message"></textarea>
                                     </div>
-                                    <input id="submit" name="submit" type="submit" class="btn btn-primary btn-lg pull-right" onClick={this.SendMessageActivity} value="Submit now!"/>
+                                    <input id="submit" name="submit" type="submit" class="btn btn-primary btn-lg pull-right" onClick={this.SendMessageActivity} value="Send Message!"/>
                               	</div>
                            	</div>
                 		</form>
