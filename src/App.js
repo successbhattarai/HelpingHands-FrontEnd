@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Login from './account/Login';
 import Register from './account/Register';
 import Success from './account/Success';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
 
       <Route path='/forgotPassword' exact component={Error} />
       <Route path='/causes' exact component={Error} />
+      <Route path='/single-cause' exact component={Error} />
+      <Route path='/contact' exact component={Contact} />
       <Route path='/careers' exact component={Error} />
       <Route path='/about' exact component={Error} />
       <Route path='/events' exact component={Error} />

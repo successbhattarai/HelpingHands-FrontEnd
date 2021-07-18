@@ -65,7 +65,7 @@ return(
             <img src="img/computer_display.svg"/>
         </div>
         <div class="confirm-container">
-            <div class="content" style={{height:"250px !important"}}>
+            <div class="ccontent" style={{height:"250px !important"}}>
                 <h2>Registration successful !</h2>
                 <i class="fa fa-check-circle"></i>
                 <div class="btn-container">

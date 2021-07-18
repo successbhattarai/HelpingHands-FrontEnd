@@ -28,11 +28,11 @@ var Heading =
             </div>
             <a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
             <div class="header-info-col"><i class="fa fa-phone"></i>01-4425661, 01-4441577</div>
-            <ul class="sf-menu dd-menu pull-right" role="menu">
+            <ul class="sf-menu dd-menu pull-right" role="menu" style={{padding:"0px !important"}}>
                 <li><a href="/">Home</a>
                 </li>
                 <li><a href="about">About</a>
-                    <ul>
+                    <ul style={{padding:"0px !important"}}>
                         <li><a href="about">Introduction</a></li>
                         <li><a href="team">Team</a></li>
                         <li><a href="our-impact">Our Impact</a></li>
@@ -173,13 +173,13 @@ var Heading =
             <ul class="sf-menu dd-menu pull-right" role="menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="about">About</a>
-                    {/* <ul>
+                    <ul>
                         <li><a href="about">Introduction</a></li>
                         <li><a href="team">Team</a></li>
                         <li><a href="our-impact">Our Impact</a></li>
                         <li><a href="careers">Careers</a></li>
                         <li><a href="contact">Contact</a></li>
-                    </ul> */}
+                    </ul>
                 </li>
                 <li><a href="causes">Causes</a>
                     {/* <ul>
