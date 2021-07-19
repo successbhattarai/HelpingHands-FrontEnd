@@ -36,7 +36,7 @@ var Heading =
                         <li><a href="about">Introduction</a></li>
                         <li><a href="team">Team</a></li>
                         <li><a href="our-impact">Our Impact</a></li>
-                        <li><a href="careers">Careers</a></li>
+                        <li><a href="become-a-volunteer">Become a Volunteer</a></li>
                         <li><a href="contact">Contact</a></li>
                     </ul>
                 </li>
@@ -177,7 +177,7 @@ var Heading =
                         <li><a href="about">Introduction</a></li>
                         <li><a href="team">Team</a></li>
                         <li><a href="our-impact">Our Impact</a></li>
-                        <li><a href="careers">Careers</a></li>
+                        <li><a href="become-a-volunteer">Become a Volunteer</a></li>
                         <li><a href="contact">Contact</a></li>
                     </ul>
                 </li>

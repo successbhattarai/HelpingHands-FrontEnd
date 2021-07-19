@@ -17,7 +17,7 @@ return(
         <span>View our causes</span>
         <strong>Donate now</strong>
     </a>
-    <a href="careers" class="featured-link col-md-4 col-sm-4">
+    <a href="become-a-volunteer" class="featured-link col-md-4 col-sm-4">
         <span>Become a volunteer</span>
         <strong>Join us now</strong>
     </a>

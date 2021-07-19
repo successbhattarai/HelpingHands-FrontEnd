@@ -8,6 +8,7 @@ import Register from './account/Register';
 import Success from './account/Success';
 import Contact from './pages/Contact';
 import Team from './pages/Team';
+import Volunteer from './pages/Volunteer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <BrowserRouter>
       <Route path='/' exact component={Home} />
       <Route path='/register' exact component={Register} />
+      <Route path='/become-a-volunteer' exact component={Volunteer} />
       <Route path='/success' exact component={Success} />
       <Route path='/login' exact component={Login} />
 
