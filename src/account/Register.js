@@ -51,6 +51,7 @@ class Register extends Component{
         .catch((error)=>{
             if(validateForm()==null){
             toast('ERROR USER REGISTRATION')
+            this.props.history.push('/register-error');
             console.log(error.response)
             }
         })

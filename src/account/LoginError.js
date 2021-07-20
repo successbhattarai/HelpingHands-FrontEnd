@@ -11,7 +11,8 @@ import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 toast.configure(); 
 
-class Success extends Component{
+class LoginError extends Component{
+
 
 render(){
 
@@ -21,23 +22,24 @@ return(
     <img class="wave" src="img/wave.svg"/>
     <div class="logincontainer">
         <div class="img">
-            <img src="img/computer_display.svg"/>
+            <img src="img/sad_face.svg"/>
         </div>
         <div class="confirm-container">
-            <div class="ccontent" style={{height:"250px !important"}}>
-                <h2>Registration successful !</h2>
-                <i class="fa fa-check-circle"></i>
+            <div class="ccontent">
+                <h2>Unable to Login</h2>
+                <i class="fa fa-exclamation-circle"></i>
                 <div class="btn-container">
-                    <a href="login" class="btn-action">LOGIN NOW</a>
+                    <a href="login" class="btn-action">Try Again</a>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-
+</div>
 )
 }
 
 }
 
-export default Success;
+
+
+export default LoginError;

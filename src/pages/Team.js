@@ -11,43 +11,22 @@ toast.configure();
 
 class Team extends Component{
 
-    state = {
-        userFirstName:'',
-        userLastName :'',
-        userPhoneNumber:'',
-        userEmail:'',
-        userMessage :''
-    }
-    handleStringChange =(e)=>{
-        this.setState({
-            [e.target.name] : e.target.value
-        })
+    state={
+        volunteers:[],
+        config:{
+            Headers:{'Authorization': `Bearer ${localStorage.getItem('token')}`}
+        }
     }
 
-    SendMessageActivity = (e)=>{
-        e.preventDefault();
-       
-        axios.post("http://localhost:9000/user/message/insert",{
-            userFirstName: this.state.userFirstName,
-            userLastName: this.state.userLastName,
-            userPhoneNumber: this.state.userPhoneNumber,
-            userEmail:this.state.userEmail,
-            userMessage:this.state.userMessage
-        })
+    componentDidMount(){
+        axios.get("http://localhost:9000/volunteer/display",this.state.config)
         .then((response)=>{
-            console.log(response);
-            toast('YOUR MESSAGE IS SENT')
-            console.log('Message Sent Successfully')
             this.setState({
-                userFirstName :'',
-                userLastName :'',
-                userPhoneNumber:'',
-                userEmail:'',
-                userMessage :''
+                volunteers: response.data
             })
-        })        
+        })
         .catch((error)=>{
-            toast('ERROR SENDING MESSAGE')
+            toast('ERROR DISPLAYING VOLUNTEER')
             console.log(error.response)
         })
     }
@@ -107,10 +86,11 @@ return(
                             <div class="row">
                                 <div >
                                     <ul class="carets">
-                                        <li class="col-ms-4 col-sm-4 col-xs-4">Sabin Budhathoki</li>
-                                        <li class="col-ms-4 col-sm-4 col-xs-4">Dilip Poudel</li>
-                                        <li class="col-ms-4 col-sm-4 col-xs-4">Ujwal Budhathoki</li>
-                                        <li class="col-ms-4 col-sm-4 col-xs-4">Ronish Joshi</li>
+                                    {
+                                        this.state.volunteers.map((volunteer)=>{
+                                            return(
+                                              <li class="col-ms-4 col-sm-4 col-xs-4">{volunteer.volunteerFullName}</li>
+                                    )})}
                                     </ul>
                                 </div>
                             </div>
@@ -120,7 +100,7 @@ return(
            	</div>
             <div class="accent-bg padding-tb20 cta-fw">
     			<div class="container">
-                    <a href="#" class="btn btn-default btn-ghost btn-light btn-rounded pull-right" style={{color:"black"}}>Become a volunteer</a>
+                    <a href="become-a-volunteer" class="btn btn-default btn-ghost btn-light btn-rounded pull-right" style={{color:"black"}}>Become a volunteer</a>
                     <h4>Let's start doing your bit for the world. Join us as a Volunteer</h4>
                 </div>
             </div>
