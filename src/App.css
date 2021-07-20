@@ -1276,7 +1276,7 @@ html[xmlns] .slides {
    6. Site Structure & Appearance
 ================================================== */
 body{
-	background-color:#fff;
+	background-color:#fff !important;
 	color:#898989;
 	font-size:15px;
 	font-weight:400;
@@ -1295,7 +1295,7 @@ body.boxed .body{
 	width:100%;
 	max-width:1200px;
 	height:auto;
-	background-color:#ffffff;
+	background-color:#ffffff !important;
 	-webkit-box-shadow:0 0 2px rgba(0,0,0,.2);
 	-moz-box-shadow:0 0 2px rgba(0,0,0,.2);
 	box-shadow:0 0 2px rgba(0,0,0,.2);

@@ -1,7 +1,6 @@
 import React from'react';
 import'../Account.css';
 import { Input } from'reactstrap';
-import'bootstrap/dist/css/bootstrap.min.css';
 import { Component,state, handleStringChange, submitRegister } from "react";
 import axios from'axios';
 import Header from '../components/Header';
@@ -41,13 +40,13 @@ class Login extends Component{
             localStorage.setItem('token',response.data.token);
             localStorage.setItem('userEmailAddress',response.data.userEmailAddress);
             toast('Welcome ' + this.state.userEmailAddress)
-
             this.props.history.push('/');
             }
         })        
         .catch((error)=>{
             if(validateForm()==null){
             toast('ERROR USER LOGIN')
+            this.props.history.push('/login-error');
             console.log(error.response)
             }
         })

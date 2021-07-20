@@ -1,7 +1,6 @@
 import React from'react';
 import'../Account.css';
 import { Input } from'reactstrap';
-import'bootstrap/dist/css/bootstrap.min.css';
 import { Component,state, handleStringChange, submitRegister } from "react";
 import axios from'axios';
 import Header from '../components/Header';
@@ -11,7 +10,7 @@ import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 toast.configure(); 
 
-class Success extends Component{
+class RegisterSuccess extends Component{
 
 render(){
 
@@ -40,4 +39,4 @@ return(
 
 }
 
-export default Success;
+export default RegisterSuccess;

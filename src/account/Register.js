@@ -1,7 +1,6 @@
 import React from'react';
 import'../Form.css';
 import { Input } from'reactstrap';
-import'bootstrap/dist/css/bootstrap.min.css';
 import { Component,state, handleStringChange, submitRegister } from "react";
 import axios from'axios';
 import Header from '../components/Header';
@@ -44,7 +43,7 @@ class Register extends Component{
             if(validateForm()==null){
                 console.log(response);
                 toast(this.state.userFullName + " Registered Successfully")
-                this.props.history.push('/success');
+                this.props.history.push('/register-success');
                 console.log('User Registered Successfully')
             }
         })        
