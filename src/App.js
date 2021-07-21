@@ -19,6 +19,9 @@ import AddBlog from './pages/AddBlog';
 import Campaign from './pages/Campaign';
 import AddCampaign from './pages/AddCampaign';
 import CampaignSingle from './pages/CampaignSingle';
+import Events from './pages/Events';
+import AddEvent from './pages/AddEvent';
+import EventSingle from './pages/EventSingle';
 
 function App() {
   return (
@@ -40,7 +43,9 @@ function App() {
       <Route path='/team' exact component={Team} />
       <Route path='/contact' exact component={Contact} />
       <Route path='/about' exact component={Error} />
-      <Route path='/events' exact component={Error} />
+      <Route path='/add-events' exact component={AddEvent} />
+      <Route path='/events' exact component={Events} />
+      <Route path='/single-event/:id' exact component={EventSingle} />
       <Route path='/gallery' exact component={Error} />
       <Route path='/add-blog' exact component={AddBlog} />
       <Route path='/blog' exact component={Blog} />
