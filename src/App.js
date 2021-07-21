@@ -16,6 +16,9 @@ import RegisterError from './account/RegisterError';
 import Blog from './pages/Blog';
 import BlogSingle from './pages/BlogSingle';
 import AddBlog from './pages/AddBlog';
+import Campaign from './pages/Campaign';
+import AddCampaign from './pages/AddCampaign';
+import CampaignSingle from './pages/CampaignSingle';
 
 function App() {
   return (
@@ -29,9 +32,11 @@ function App() {
       <Route path='/login-error' exact component={LoginError} />
       <Route path='/forgotPassword' exact component={ForgotPassword} />
   
+      <Route path='/add-campaign' exact component={AddCampaign} />
+      <Route path='/campaign' exact component={Campaign} />
       <Route path='/become-a-volunteer' exact component={Volunteer} />
-      <Route path='/causes' exact component={Error} />
-      <Route path='/single-cause' exact component={Error} />
+      <Route path='/causes' exact component={Campaign} />
+      <Route path='/single-cause/:id' exact component={CampaignSingle} />
       <Route path='/team' exact component={Team} />
       <Route path='/contact' exact component={Contact} />
       <Route path='/about' exact component={Error} />
