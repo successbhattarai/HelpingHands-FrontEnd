@@ -22,6 +22,7 @@ import CampaignSingle from './pages/CampaignSingle';
 import Events from './pages/Events';
 import AddEvent from './pages/AddEvent';
 import EventSingle from './pages/EventSingle';
+import Gallery from './pages/Gallery';
 
 function App() {
   return (
@@ -46,7 +47,7 @@ function App() {
       <Route path='/add-events' exact component={AddEvent} />
       <Route path='/events' exact component={Events} />
       <Route path='/single-event/:id' exact component={EventSingle} />
-      <Route path='/gallery' exact component={Error} />
+      <Route path='/gallery' exact component={Gallery} />
       <Route path='/add-blog' exact component={AddBlog} />
       <Route path='/blog' exact component={Blog} />
       <Route path='/single-post/:id' exact component={BlogSingle} />
