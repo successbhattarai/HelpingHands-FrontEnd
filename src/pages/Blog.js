@@ -29,7 +29,7 @@ class Blog extends Component{
             })
         })
         .catch((error)=>{
-            toast('ERROR DISPLAYING STANDINGS')
+            toast('ERROR DISPLAYING BLOGS')
             console.log(error.response)
         })
     }
