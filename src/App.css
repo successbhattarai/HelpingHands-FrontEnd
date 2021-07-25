@@ -2443,7 +2443,6 @@ body.boxed .body{
 	position:relative;
 	padding-top:50px;
 	padding-bottom:30px;
-	z-index:3;
 	background:#fff;
 }
 .cause-grid-item .meta-data{
@@ -2686,6 +2685,7 @@ body.boxed .body{
 .blog-grid-item .tag-cloud{
 	margin-top:22px;
 }
+
 #DonateModal .modal-body{
 	background:#f6f6f6;
 	padding-left:40px;
@@ -2699,7 +2699,7 @@ body.boxed .body{
 	line-height:30px;
 }
 #DonateModal .modal-dialog{
-	width:800px;
+	width:100%;
 }
 #DonateModal .modal-header{
 	position:relative;
@@ -2727,7 +2727,7 @@ body.boxed .body{
 	color:#fff;
 	border-radius:100%;
 	left:50%;
-	top:50%;
+	top:70%;
 	margin:-12px 0 0 -6px;
 	text-transform:uppercase;
 	font-weight:700;
