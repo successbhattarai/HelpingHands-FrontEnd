@@ -8,34 +8,35 @@ import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Slider from '../components/Slider';
 import Footer from '../components/Footer';
-import UrgentPost from '../campaigns/UrgentPost';
+import UrgentPost from '../components/UrgentPost';
 import DonateModal from '../components/DonateModal';
+import UpcommingEvents from '../components/UpcommingEvents';
+import GalleryUpdate from '../components/GalleryUpdate';
 
 toast.configure();
 
 class Home extends Component{
 
-state={
-campaigns:[],
-config:{
-Headers:{'Authorization': `Bearer ${localStorage.getItem('token')}`}
-}
-}
+    state={
+        blogs:[],
+        config:{
+            Headers:{'Authorization': `Bearer ${localStorage.getItem('token')}`}
+        }
+    }
 
 
-componentDidMount(){
-axios.get("http://localhost:9000/campaign/display",this.state.config)
-.then((response)=>{
-this.setState({
-campaigns: response.data
-})
-})
-.catch((error)=>{
-toast('ERROR DISPLAYING EVENT')
-console.log(error.response)
-})
-}
-
+    componentDidMount(){
+        axios.get("http://localhost:9000/blog/latest",this.state.config)
+        .then((response)=>{
+            this.setState({
+                blogs: response.data
+            })
+        })
+        .catch((error)=>{
+            toast('ERROR DISPLAYING BLOGS')
+            console.log(error.response)
+        })
+    }
 
 
 render(){
@@ -69,11 +70,89 @@ return(
         </div>
     </div>
     
-    <Footer></Footer>
+    <div class="featured-texts row">
+        <div class="featured-text col-md-3 col-sm-3">
+            <span>Successful projects</span>
+            <strong>0</strong>
+        </div>
+        <div class="featured-text col-md-3 col-sm-3">
+            <span>People Impacted</span>
+            <strong>0</strong>
+        </div>
+        <div class="featured-text col-md-3 col-sm-3">
+            <span>Total amount raised</span>
+            <strong>0</strong>
+        </div>
+        <div class="featured-text col-md-3 col-sm-3">
+            <span>Total Volunteers</span>
+            <strong>0</strong>
+        </div>
+    </div>
+    
+    <div class="padding-tb75 position-relative">
+        <div class="half-bg-right accent-bg"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="block-title">Upcoming events</h2>
+                    <div class="spacer-20"></div>
+                    <UpcommingEvents></UpcommingEvents>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="gallery-updates cols2 clearfix">
+                        <GalleryUpdate></GalleryUpdate>
+                        <div class="gallery-updates-overlay">
+                            <i class="fa fa-image"></i> Updates from our gallery
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="padding-tb75 lgray-bg">
+            	<div class="container">
+                	<div class="row">
+                    	<div class="col-md-4 col-sm-4">
+                       		<h2 class="block-title">Latest news from our blog</h2>
+                            <p>Read Helping Hands’ latest news and the real-life stories from our customers and carers across the country. Our blog also provides an insight how we’re supporting needed people of all ages, each and every day.</p>
+                        </div>
+                        
+                        <div class="col-md-8 col-sm-8">
+                            <div class="carousel-wrapper">
+                                <div class="row">
+                                    <ul class="owl-carousel carousel-fw owl-theme" id="news-slider" data-columns="2" data-autoplay="" data-pagination="yes" data-arrows="no" data-single-item="no" data-items-desktop="2" data-items-desktop-small="1" data-items-tablet="1" data-items-mobile="1">
+                                    {
+                                    this.state.blogs.map((blog)=>{
+                                        return(
+                                        <li class="item" style={{float:"left"}}>
+                                            <div class="grid-item blog-grid-item format-standard">
+                                                <div class="grid-item-inner">
+                                                    <a href="single-event.html" class="media-box">
+                                                        <img src={'http://localhost:9000/images/blog/' + blog.blogImage}  style={{width:"360px",height:"240px"}} alt=""/>
+                                                    </a>
+                                                    <div class="grid-item-content">
+                                                        <h3 class="post-title"><a href="single-post.html">{blog.blogTitle}</a></h3>
+                                                        <span class="meta-data">Posted on 11th Dec, 2015</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                   )})}
+                                   </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+    
+    <Footer></Footer>
+    
     <DonateModal></DonateModal>
-</div>
-)
+</div>)
 }
 
 }

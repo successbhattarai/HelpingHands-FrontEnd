@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import decode from 'jwt-decode';
-import Header from '../components/Header';
-import FeatureLinks from '../components/FeatureLinks';
+import Header from './Header';
+import FeatureLinks from './FeatureLinks';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Slider from '../components/Slider';
-import Footer from '../components/Footer';
+import Slider from './Slider';
+import Footer from './Footer';
 
 toast.configure();
 
@@ -29,7 +29,7 @@ class UrgentPost extends Component{
             })
         })
         .catch((error)=>{
-            toast('ERROR DISPLAYING EVENT')
+            toast('ERROR DISPLAYING CAMPAIGN')
             console.log(error.response)
         })
     }
