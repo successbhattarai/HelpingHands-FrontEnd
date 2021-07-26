@@ -23,6 +23,11 @@ import Events from './pages/Events';
 import AddEvent from './pages/AddEvent';
 import EventSingle from './pages/EventSingle';
 import Gallery from './pages/Gallery';
+import AboutUs from './pages/AboutUs';
+import OurImpact from './pages/OurImpact';
+import PaymentTerms from './pages/PaymentTerms';
+import RefundPolicy from './pages/RefundPolicy';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   return (
@@ -43,7 +48,8 @@ function App() {
       <Route path='/single-cause/:id' exact component={CampaignSingle} />
       <Route path='/team' exact component={Team} />
       <Route path='/contact' exact component={Contact} />
-      <Route path='/about' exact component={Error} />
+      <Route path='/about' exact component={AboutUs} />
+      <Route path='/our-impact' exact component={OurImpact} />
       <Route path='/add-events' exact component={AddEvent} />
       <Route path='/events' exact component={Events} />
       <Route path='/single-event/:id' exact component={EventSingle} />
@@ -51,9 +57,9 @@ function App() {
       <Route path='/add-blog' exact component={AddBlog} />
       <Route path='/blog' exact component={Blog} />
       <Route path='/single-post/:id' exact component={BlogSingle} />
-      <Route path='/privacy-policy' exact component={Error} />
-      <Route path='/payment-terms' exact component={Error} />
-      <Route path='/refund-policy' exact component={Error} />
+      <Route path='/privacy-policy' exact component={PrivacyPolicy} />
+      <Route path='/payment-terms' exact component={PaymentTerms} />
+      <Route path='/refund-policy' exact component={RefundPolicy} />
       </BrowserRouter>
  </div>
   );

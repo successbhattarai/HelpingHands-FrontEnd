@@ -4,6 +4,7 @@ import { Input } from'reactstrap';
 import Header from '../components/Header';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import DonateModal from '../components/DonateModal';
 import Footer from '../components/Footer';
 import EducationalPost from '../campaigns/EducationalPost';
 
@@ -91,7 +92,7 @@ return(
         </div>
         
 
-
+    <DonateModal></DonateModal>
  
     <Footer></Footer>
 </div>

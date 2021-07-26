@@ -61,11 +61,11 @@ return(
                          <li class="col-md-4 col-sm-4 grid-item blog-grid-item format-standard">
                         <div class="grid-item-inner">
                             <a href={"single-post/" + blog._id} class="media-box">
-                                <img src={'http://localhost:9000/images/blog/' + blog.blogImage} alt=""/>
+                                <img src={'http://localhost:9000/images/blog/' + blog.blogImage}  style={{width:"350px",height:"232px"}} alt=""/>
                             </a>
                             <div class="grid-item-content">
                                 <h3 class="post-title"><a href={"single-post/" + blog._id}>{blog.blogTitle}</a></h3>
-                                <span class="meta-data"><i class="fa fa-calendar"></i> Posted on 11th Dec, 2015</span>
+                                <span class="meta-data"><i class="fa fa-calendar"></i> Posted on {blog.blogPostDate}</span>
                                 <p>{blog.blogDescription}</p>
                                 <div class="tag-cloud">
                                     <i class="fa fa-tags"></i> 
@@ -76,15 +76,9 @@ return(
                     </li>
                 )})}
                 </ul>
-          
-            </div>
-           
+            </div>  
         </div>
-    
     </div>
-   
-
-
 </div>
 )
 }
