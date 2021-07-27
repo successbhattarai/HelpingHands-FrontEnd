@@ -42,11 +42,8 @@ class AddCampaign extends Component{
         formData.append('campaignGoal', this.state.campaignGoal);
         formData.append('campaignDays', this.state.campaignDays);
         formData.append('campaignCategories', this.state.campaignCategories);
-        formData.append('campaignTags', this.state.campaignTags);
+        formData.append('campaignTags', this.state.campaignCategories);
         formData.append('campaignFullDescription', this.state.campaignFullDescription);
-
-
-       
 
         axios.post("http://localhost:9000/campaign/insert", formData, {
 
@@ -97,46 +94,30 @@ return(
                                 <label>Featured Image</label>
                             	<input type="file" name="campaignImage" id="campaignImage" onChange={this.handleImageChange} class="form-control"/>
 
-                            	<label>Campaign Name</label>
+                            	<label>Title</label>
                             	<input type="text" placeholder="Title*" id="campaignName" name="campaignName" value={this.state.campaignName} onChange={this.handleStringChange} class="form-control"/>
 
                                 <label>Short Description</label>
                             	<input type="text" placeholder="Short Description*" id="campaignShortDescription" name="campaignShortDescription" value={this.state.campaignShortDescription} onChange={this.handleStringChange} class="form-control"/>
                                 
 
-                                <label>Fundraising Goal ($)</label>
-                            	<input type="text" placeholder="Fundraising Goal ($)*"  id="campaignGoal" name="campaignGoal" value={this.state.campaignGoal} onChange={this.handleStringChange} class="form-control"/>
+                                <label>Goal (NPR.)</label>
+                            	<input type="text" placeholder="Fundraising Goal (NPR)*"  id="campaignGoal" name="campaignGoal" value={this.state.campaignGoal} onChange={this.handleStringChange} class="form-control"/>
                             	
-                                <label>Length in Days</label>
-                            	<input type="number" placeholder="Length in Days*"  id="campaignDays" name="campaignDays" value={this.state.campaignDays} onChange={this.handleStringChange} class="form-control"/>
+                                <label>Number of Days Campaign Should be Active</label>
+                            	<input type="number" placeholder="No. of Days*"  id="campaignDays" name="campaignDays" value={this.state.campaignDays} onChange={this.handleStringChange} class="form-control"/>
                             	
-                                <div class="row">
-                                	
-                                	<div class="col-md-6 col-sm-6 col-xs-6">
-                            			<label>Categories</label>
+                               
+                            			<label>Donation Type (Select that apply)</label>
                                         <Input type="select" name="campaignCategories" id="campaignCategories" value={this.state.campaignCategories} onChange={this.handleStringChange} required="required">
                                             <option value="Education">Education</option>
                                             <option value="Environment">Environment</option>
-                                            <option value="Human Rights">Human Rights</option>
-                                            <option value="Students">Students</option>
-                                            <option value="Water">Water</option>
-                                            <option value="Wildlife">Wildlife</option>
+                                            <option value="Food">Food</option>
+                                            <option value="Funeral Expenses">Funeral Expenses</option>
+                                            <option value="Medical Expenses">Medical Expenses</option>
+                                            <option value="Life Essential Necessities">Life Essential Necessities</option>
                                             <option value="Others">Others</option>
                                         </Input>
-                                	</div>
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <label>Tags</label>
-                                    <Input type="select" name="campaignTags" id="campaignTags" value={this.state.campaignTags} onChange={this.handleStringChange} required="required">
-                                        <option value="Business">Business</option>
-                                        <option value="Education">Education</option>
-                                        <option value="Environment">Environment</option>
-                                        <option value="Help">Help</option>
-                                        <option value="Water">Water</option>
-                                        <option value="Wild">Wild</option>
-                                        <option value="Wild">Oyhers</option>
-                                    </Input>
-                                   </div>
-                               	</div>
 
                                 <label>Full Description</label>
                             	<input type="text" placeholder="Full Description*"  id="campaignFullDescription" name="campaignFullDescription" value={this.state.campaignFullDescription} onChange={this.handleStringChange} class="form-control"/>

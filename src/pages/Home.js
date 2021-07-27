@@ -10,6 +10,7 @@ import UrgentPost from '../components/UrgentPost';
 import DonateModal from '../components/DonateModal';
 import UpcommingEvents from '../components/UpcommingEvents';
 import GalleryUpdate from '../components/GalleryUpdate';
+import Counters from '../components/Counters';
 
 toast.configure();
 
@@ -67,25 +68,8 @@ return(
         </div>
     </div>
     
-    <div class="featured-texts row">
-        <div class="featured-text col-md-3 col-sm-3">
-            <span>Successful projects</span>
-            <strong>0</strong>
-        </div>
-        <div class="featured-text col-md-3 col-sm-3">
-            <span>People Impacted</span>
-            <strong>0</strong>
-        </div>
-        <div class="featured-text col-md-3 col-sm-3">
-            <span>Total amount raised</span>
-            <strong>0</strong>
-        </div>
-        <div class="featured-text col-md-3 col-sm-3">
-            <span>Total Volunteers</span>
-            <strong>0</strong>
-        </div>
-    </div>
-    
+    <Counters></Counters>
+
     <div class="padding-tb75 position-relative">
         <div class="half-bg-right accent-bg"></div>
         <div class="container">

@@ -6,7 +6,13 @@ import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DonateModal from '../components/DonateModal';
 import Footer from '../components/Footer';
-import EducationalPost from '../campaigns/EducationalPost';
+import EducationCampaign from '../campaigns/EducationCampaign';
+import EnvironmentCampaign from '../campaigns/EnvironmentCampaign';
+import FoodCampaign from '../campaigns/FoodCampaign';
+import FuneralExpensesCampaign from '../campaigns/FuneralExpensesCampaign';
+import LifeEssentialsCampaign from '../campaigns/LifeEssentialsCampaign';
+import MedicalExpensesCampaign from '../campaigns/MedicalExpensesCampaign';
+import OthersCampaign from '../campaigns/OthersCampaign';
 
 toast.configure();
 
@@ -63,7 +69,13 @@ return(
                     </div>
                     <div class="row">
                         <ul class="sort-destination isotope gallery-items" data-sort-id="gallery">
-                            <EducationalPost></EducationalPost>
+                            <EducationCampaign></EducationCampaign>
+                            <EnvironmentCampaign></EnvironmentCampaign>
+                            <FoodCampaign></FoodCampaign>
+                            <FuneralExpensesCampaign></FuneralExpensesCampaign>
+                            <LifeEssentialsCampaign></LifeEssentialsCampaign>
+                            <MedicalExpensesCampaign></MedicalExpensesCampaign>
+                            <OthersCampaign></OthersCampaign>
                         </ul>
                     </div>
                     

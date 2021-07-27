@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from '../components/Footer';
+import Counters from '../components/Counters';
 
 toast.configure();
 
@@ -127,32 +128,7 @@ return(
                	</div>
             </div>
             <div class="spacer-50"></div>
-            <div class="padding-tb45 parallax parallax-light parallax1 counters">
-            	<div class="container">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                            <div class="fact-ico"> <i class="fa fa-user fa-4x"></i> </div>
-                            <div class="timer" data-perc="9000"> <span class="count">{this.state.totalDonations}</span> </div>
-                            <span class="fact">No. of Donations</span>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                            <div class="fact-ico"> <i class="fa fa-heart-o fa-4x"></i> </div>
-                            <div class="timer" data-perc="96"> <span class="count">{this.state.campaignsTotal}</span> </div>
-                            <span class="fact">Causes</span>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                            <div class="fact-ico"> <i class="fa fa-bar-chart-o fa-4x"></i> </div>
-                            <div class="timer" data-perc="1500"><span class="count">{this.state.usersTotal}</span></div>
-                            <span class="fact">Total members</span>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                            <div class="fact-ico"> <i class="fa fa-hand-peace-o fa-4x"></i> </div>
-                            <div class="timer" data-perc="1500"> <span class="count">{this.state.volunteersTotal}</span> </div>
-                            <span class="fact">Volunteers</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Counters></Counters>
             <div class="padding-tb75 padding-b0">
                 <div class="container">
                 	<div class="text-align-center">

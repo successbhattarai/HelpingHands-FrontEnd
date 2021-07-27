@@ -10,6 +10,7 @@ toast.configure();
 class Header extends Component{
 
     state={
+        events: [],
         blogs:[],
         campaigns: [],
         config:{
@@ -18,7 +19,7 @@ class Header extends Component{
     }
 
     componentDidMount(){
-        axios.get("http://localhost:9000/blog/latest/limit=2",this.state.config)
+        axios.get("http://localhost:9000/blog/latest/limit=3",this.state.config)
         .then((response)=>{
             this.setState({
                 blogs: response.data
@@ -29,10 +30,21 @@ class Header extends Component{
             console.log(error.response)
         })
 
-        axios.get("http://localhost:9000/campaign/latest/limit=2",this.state.config)
+        axios.get("http://localhost:9000/campaign/latest/limit=3",this.state.config)
         .then((response)=>{
             this.setState({
                 campaigns: response.data
+            })
+        })
+        .catch((error)=>{
+            toast('ERROR DISPLAYING CAMPAIGN')
+            console.log(error.response)
+        })
+
+        axios.get("http://localhost:9000/event/display/limit=3",this.state.config)
+        .then((response)=>{
+            this.setState({
+                events: response.data
             })
         })
         .catch((error)=>{
@@ -141,7 +153,7 @@ render(){
                                                 </div>
                                             </div>
                                             <div class="col-md-3 megamenu-col">
-                                                <span class="megamenu-sub-title"><i class="fa fa-microphone"></i> Latest causes</span>
+                                                <span class="megamenu-sub-title"><i class="fa fa-image"></i> Latest Causes</span>
                                                 <ul class="widget_recent_causes">
                                                     {
                                                     this.state.campaigns.map((campaign)=>{
@@ -162,8 +174,25 @@ render(){
                                                 </ul>
                                             </div>
                                             <div class="col-md-3 megamenu-col">
-                                                <span class="megamenu-sub-title"><i class="fa fa-star"></i> Featured Video</span>
-                                                <div class="fw-video"><iframe src="https://player.vimeo.com/video/62947247" width="500px" height="275px"></iframe></div>
+                                                <span class="megamenu-sub-title"><i class="fa fa-star"></i> Latest Events</span>
+                                                <ul class="widget_recent_causes">
+                                                    {
+                                                    this.state.events.map((event)=>{
+                                                    return(
+                                                    <li>
+                                                        <a href="#" class="cause-thumb">
+                                                            <img src={'http://localhost:9000/images/event/' + event.eventImage} alt="" class="img-thumbnail" />
+                                                            <div class="cProgress" data-complete="88" data-color="42b8d4">
+                                                                <strong></strong>
+                                                            </div>
+                                                        </a>
+                                                        <h5><a href="single-cause.html">{event.eventName}</a></h5>
+                                                        <span class="meta-data">{event.eventAttendees} Attendees</span>
+                                                    </li>
+                                                    )
+                                                    })
+                                                    }
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -173,6 +202,15 @@ render(){
                         <li><a href="blog">Blog</a>
                             <ul class="dropdown">
                                 <li><a href="add-blog">ADD BLOG</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Account</a>
+                            <ul>
+                                <li><a href="">Update Profile</a></li>
+                                <li><a href="">Balance Status</a></li>
+                                <li><a href="">Donation History</a></li>
+                                <li><a href="">Blog History</a></li>
+                                <li><a href="">Event History</a></li>
                             </ul>
                         </li>
                     </ul>

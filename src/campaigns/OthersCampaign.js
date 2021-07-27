@@ -11,7 +11,7 @@ import Footer from '../components/Footer';
 
 toast.configure();
 
-class EducationalPost extends Component{
+class OthersCampaign extends Component{
 
         state={
         campaigns:[],
@@ -22,14 +22,13 @@ class EducationalPost extends Component{
 
 
     componentDidMount(){
-        axios.get("http://localhost:9000/campaign/display/education",this.state.config)
+        axios.get("http://localhost:9000/campaign/display/other",this.state.config)
         .then((response)=>{
             this.setState({
                 campaigns: response.data
             })
         })
         .catch((error)=>{
-            toast('ERROR DISPLAYING EVENT')
             console.log(error.response)
         })
     }
@@ -42,10 +41,10 @@ render(){
         {
     this.state.campaigns.map((campaign)=>{
         return(
-            <li class="col-md-4 col-sm-6 grid-item cause-grid-item education format-standard">
+            <li class="col-md-4 col-sm-6 grid-item cause-grid-item others format-standard">
                 <div class="grid-item-inner">
                     <a href={"single-cause/" + campaign._id}  class="media-box">
-                        <img src={'http://localhost:9000/images/campaign/' + campaign.campaignImage} alt=""/>
+                        <img src={'http://localhost:9000/images/campaign/' + campaign.campaignImage} style={{width:"358px",height:"238px"}} alt=""/>
                     </a>
                     <div class="grid-item-content">
                         <a class="cProgress" data-complete="88" data-color="F23827" data-toggle="tooltip" data-original-title="10 days left"><strong></strong></a>
@@ -64,4 +63,4 @@ render(){
 
 }
 
-export default EducationalPost;
+export default OthersCampaign;

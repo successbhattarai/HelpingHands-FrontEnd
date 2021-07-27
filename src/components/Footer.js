@@ -22,12 +22,12 @@ return(
                         <p><img src="images/logo2.png" alt="" /></p>
                         <p>Helping Hands is trusted around the world for its simple, reliable fundraising platform. Our Trust & Safety team works around the clock to protect against fraud.</p>
                         <ul class="social-icons-rounded social-icons-colored">
-                            <li class="facebook"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                            <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li class="googleplus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li class="youtube"><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                            <li class="vimeo"><a href="#"><i class="fa fa-vimeo"></i></a></li>
-                            <li class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li class="facebook"><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
+                            <li class="twitter"><a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li class="googleplus"><a href="https://www.google.com" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="youtube"><a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                            <li class="vimeo"><a href="https://www.vimeo.com" target="_blank"><i class="fa fa-vimeo"></i></a></li>
+                            <li class="instagram"><a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
