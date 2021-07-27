@@ -14,10 +14,7 @@ class Campaign extends Component{
     
  
     state={
-        campaigns:[],
-        config:{
-            Headers:{'Authorization': `Bearer ${localStorage.getItem('token')}`}
-        }
+        campaigns:[]
     }
 
 

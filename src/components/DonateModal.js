@@ -33,19 +33,19 @@ class DonateModal extends Component{
         })
     }
     retriveUserData=()=>{
-        const token = localStorage.getItem("token");
-        const decodeToken = decode(token); 
-        // const userId = "60f6359098e94e56a82e4c51";
-        const userId = decodeToken.userId;
-        axios.get('http://localhost:9000/account/'+ userId)
-        .then((response)=>{
-            this.setState({
-                userFullName : response.data.userFullName,
-                userFullName : response.data.userFullName,
-                userEmailAddress : response.data.userEmailAddress,
-                userContactNumber : response.data.userContactNumber
-            })
-        })
+        // const token = localStorage.getItem("token");
+        // const decodeToken = decode(token); 
+        // // const userId = "60f6359098e94e56a82e4c51";
+        // const userId = decodeToken.userId;
+        // axios.get('http://localhost:9000/account/'+ userId)
+        // .then((response)=>{
+        //     this.setState({
+        //         userFullName : response.data.userFullName,
+        //         userFullName : response.data.userFullName,
+        //         userEmailAddress : response.data.userEmailAddress,
+        //         userContactNumber : response.data.userContactNumber
+        //     })
+        // })
     }
       
     handleDonation = (e)=>{

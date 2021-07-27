@@ -28,6 +28,7 @@ import OurImpact from './pages/OurImpact';
 import PaymentTerms from './pages/PaymentTerms';
 import RefundPolicy from './pages/RefundPolicy';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import FAQ from './pages/Faq';
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
       <Route path='/gallery' exact component={Gallery} />
       <Route path='/add-blog' exact component={AddBlog} />
       <Route path='/blog' exact component={Blog} />
+      <Route path='/frequently-asked-question' exact component={FAQ} />
       <Route path='/single-post/:id' exact component={BlogSingle} />
       <Route path='/privacy-policy' exact component={PrivacyPolicy} />
       <Route path='/payment-terms' exact component={PaymentTerms} />

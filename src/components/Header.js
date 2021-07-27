@@ -64,11 +64,11 @@ render(){
                         </li>
                         <li><a href="about">About</a>
                             <ul style={{padding:"0px !important"}}>
-                                <li><a href="about">Introduction</a></li>
                                 <li><a href="team">Team</a></li>
                                 <li><a href="our-impact">Our Impact</a></li>
                                 <li><a href="become-a-volunteer">Become a Volunteer</a></li>
                                 <li><a href="contact">Contact</a></li>
+                                <li><a href="frequently-asked-question">FAQ</a></li>
                             </ul>
                         </li>
                         <li><a href="causes">Causes</a>
@@ -198,11 +198,11 @@ render(){
                         <li><a href="/">Home</a></li>
                         <li><a href="about">About</a>
                             <ul>
-                                <li><a href="about">Introduction</a></li>
                                 <li><a href="team">Team</a></li>
                                 <li><a href="our-impact">Our Impact</a></li>
                                 <li><a href="become-a-volunteer">Become a Volunteer</a></li>
                                 <li><a href="contact">Contact</a></li>
+                                <li><a href="frequently-asked-question">FAQ</a></li>
                             </ul>
                         </li>
                         <li><a href="causes">Causes</a>
@@ -240,7 +240,7 @@ render(){
                                             <div class="col-md-3 megamenu-col">
                                                 <span class="megamenu-sub-title"><i class="fa fa-newspaper-o"></i> Latest news</span>
                                                 <div class="widget recent_posts">
-                                                    <ul>
+                                                    {/* <ul>
                                                         {
                                                         this.state.blogs.map((blog)=>{
                                                         return(
@@ -254,14 +254,14 @@ render(){
                                                         )
                                                         })
                                                         }
-                                                    </ul>
+                                                    </ul> */}
                                                 </div>
-                                                */
+                                                
                                             </div>
                                             <div class="col-md-3 megamenu-col">
                                                 <span class="megamenu-sub-title"><i class="fa fa-microphone"></i> Latest causes</span>
                                                 
-                                                <ul class="widget_recent_causes">
+                                                {/* <ul class="widget_recent_causes">
                                                     {
                                                     this.state.campaigns.map((campaign)=>{
                                                     return(
@@ -278,7 +278,7 @@ render(){
                                                     )
                                                     })
                                                     }
-                                                </ul>
+                                                </ul> */}
                                             </div>
                                             <div class="col-md-3 megamenu-col">
                                                 <span class="megamenu-sub-title"><i class="fa fa-star"></i> Featured Video</span>
