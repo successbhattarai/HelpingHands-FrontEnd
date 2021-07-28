@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Input } from'reactstrap';
+import decode from 'jwt-decode';
 import Header from '../components/Header';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -20,7 +21,8 @@ class AddEvent extends Component{
         eventYear:'',
         eventCategories :'',
         eventLocation :'',
-        eventFullDescription :''
+        eventFullDescription :'',
+        eventPostedBy:''
     }
     
     handleStringChange =(e)=>{
@@ -38,6 +40,9 @@ class AddEvent extends Component{
     AddEvent = (e)=>{
         e.preventDefault();
         const formData = new FormData();
+        const token = localStorage.getItem("token");
+        const decodeToken = decode(token); 
+        const userId = decodeToken.userId;
         formData.append('eventImage', this.state.eventImage);
         formData.append('eventName', this.state.eventName);
         formData.append('eventShortDescription', this.state.eventShortDescription);
@@ -48,9 +53,7 @@ class AddEvent extends Component{
         formData.append('eventCategories', this.state.eventCategories);
         formData.append('eventLocation', this.state.eventLocation);
         formData.append('eventFullDescription', this.state.eventFullDescription);
-
-
-       
+        formData.append('eventPostedBy', userId);
 
         axios.post("http://localhost:9000/event/insert", formData, {
 
@@ -62,7 +65,7 @@ class AddEvent extends Component{
         .then((response)=>{
             console.log(response);
             toast(this.state.eventName + " " + " Added Successfully")
-            this.props.history.push('/event');
+            this.props.history.push('/events');
             console.log('Event Added Successfully')
             
         })        

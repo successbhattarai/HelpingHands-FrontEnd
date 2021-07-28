@@ -208,8 +208,9 @@ render(){
                             <ul>
                                 <li><a href="">Update Profile</a></li>
                                 <li><a href="">Load Balance</a></li>
+                                <li><a href={'/my-campaigns/'+ decode(localStorage.getItem("token")).userId}>My Camapigns</a></li>
                                 <li><a href={'/my-donations/'+ decode(localStorage.getItem("token")).userId}>My Donations</a></li>
-                                <li><a href={'/my-blog/'+ decode(localStorage.getItem("token")).userId}>My Blogs</a></li>
+                                <li><a href={'/my-blogs/'+ decode(localStorage.getItem("token")).userId}>My Blogs</a></li>
                                 <li><a href={'/my-events/'+ decode(localStorage.getItem("token")).userId}>My Events</a></li>
                             </ul>
                         </li>

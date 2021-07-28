@@ -21,7 +21,8 @@ class DonateModal extends Component{
             donorAddress2:"",
             donorCity:"",
             donorPostalCode:"",
-            donorDonated:""
+            donorDonated:"",
+            donatedBy:""
         }
 
     componentWillMount() {
@@ -33,25 +34,29 @@ class DonateModal extends Component{
         })
     }
     retriveUserData=()=>{
-        // const token = localStorage.getItem("token");
-        // const decodeToken = decode(token); 
-        // // const userId = "60f6359098e94e56a82e4c51";
-        // const userId = decodeToken.userId;
-        // axios.get('http://localhost:9000/account/'+ userId)
-        // .then((response)=>{
-        //     this.setState({
-        //         userFullName : response.data.userFullName,
-        //         userFullName : response.data.userFullName,
-        //         userEmailAddress : response.data.userEmailAddress,
-        //         userContactNumber : response.data.userContactNumber
-        //     })
-        // })
+        const token = localStorage.getItem("token");
+        const decodeToken = decode(token); 
+        // const userId = "60f6359098e94e56a82e4c51";
+        const userId = decodeToken.userId;
+        axios.get('http://localhost:9000/account/'+ userId)
+        .then((response)=>{
+            this.setState({
+                userFullName : response.data.userFullName,
+                userFullName : response.data.userFullName,
+                userEmailAddress : response.data.userEmailAddress,
+                userContactNumber : response.data.userContactNumber
+            })
+        })
     }
       
     handleDonation = (e)=>{
         
         e.preventDefault();
+        const token = localStorage.getItem("token");
+        const decodeToken = decode(token); 
+        const userId = decodeToken.userId;
         axios.post("http://localhost:9000/donate", {
+            
             donorFullName:this.state.userFullName,
             donorEmailAddress : this.state.userEmailAddress,
             donorContactNumber : this.state.userContactNumber,
@@ -59,7 +64,8 @@ class DonateModal extends Component{
             donorAddress2 : this.state.donorAddress2,
             donorCity : this.state.donorCity,
             donorPostalCode : this.state.donorPostalCode,
-            donorDonated : this.state.donorDonated
+            donorDonated : this.state.donorDonated,
+            donatedBy: userId
         })
         .then((response)=>{
                 console.log(response);

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Input } from'reactstrap';
+import decode from 'jwt-decode';
 import Header from '../components/Header';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -18,7 +19,8 @@ class AddCampaign extends Component{
         campaignDays :'',
         campaignCategories :'',
         campaignTags :'',
-        campaignFullDescription :''
+        campaignFullDescription :'',
+        campaignPostedBy:''
     }
     
     handleStringChange =(e)=>{
@@ -36,6 +38,9 @@ class AddCampaign extends Component{
     AddCampaign = (e)=>{
         e.preventDefault();
         const formData = new FormData();
+        const token = localStorage.getItem("token");
+        const decodeToken = decode(token); 
+        const userId = decodeToken.userId;
         formData.append('campaignImage', this.state.campaignImage);
         formData.append('campaignName', this.state.campaignName);
         formData.append('campaignShortDescription', this.state.campaignShortDescription);
@@ -44,6 +49,7 @@ class AddCampaign extends Component{
         formData.append('campaignCategories', this.state.campaignCategories);
         formData.append('campaignTags', this.state.campaignCategories);
         formData.append('campaignFullDescription', this.state.campaignFullDescription);
+        formData.append('campaignPostedBy', userId);
 
         axios.post("http://localhost:9000/campaign/insert", formData, {
 

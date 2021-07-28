@@ -30,6 +30,9 @@ import RefundPolicy from './pages/RefundPolicy';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import FAQ from './pages/Faq';
 import MyBlog from './account/MyBlog';
+import MyDonation from './account/MyDonation';
+import MyCampaign from './account/MyCampaign';
+import MyEvents from './account/MyEvents';
 
 function App() {
   return (
@@ -63,9 +66,10 @@ function App() {
       <Route path='/privacy-policy' exact component={PrivacyPolicy} />
       <Route path='/payment-terms' exact component={PaymentTerms} />
       <Route path='/refund-policy' exact component={RefundPolicy} />
-      <Route path='/my-blog/:id' exact component={MyBlog} />
-      <Route path='/my-events/:id' exact component={MyBlog} />
-      <Route path='/my-donations/:id' exact component={MyBlog} />
+      <Route path='/my-blogs/:id' exact component={MyBlog} />
+      <Route path='/my-campaigns/:id' exact component={MyCampaign} />
+      <Route path='/my-events/:id' exact component={MyEvents} />
+      <Route path='/my-donations/:id' exact component={MyDonation} />
       </BrowserRouter>
  </div>
   );
