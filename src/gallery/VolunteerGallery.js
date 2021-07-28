@@ -22,7 +22,7 @@ class VolunteerGallery extends Component{
 
 
     componentDidMount(){
-        axios.get("http://localhost:9000/volunteer/display",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/volunteer/display",this.state.config)
         .then((response)=>{
             this.setState({
                 volunteers: response.data
@@ -43,7 +43,7 @@ render(){
             this.state.volunteers.map((volunteer)=>{
             return(
             <li class="col-md-6 col-sm-6 col-xs-6 grid-item gallery-grid-item volunteers format-image">
-                <a href={'http://localhost:9000/images/volunteer/' + volunteer.volunteerImage} class="media-box magnific-image"> <img src={'http://localhost:9000/images/volunteer/' + volunteer.volunteerImage} alt="" style={{width:"555px", height:"370px"}} /> </a>
+                <a href={'https://helpinghand-backend.herokuapp.com/images/volunteer/' + volunteer.volunteerImage} class="media-box magnific-image"> <img src={'https://helpinghand-backend.herokuapp.com/images/volunteer/' + volunteer.volunteerImage} alt="" style={{width:"555px", height:"370px"}} /> </a>
                 <div class="grid-item-content">
                     <p>{volunteer.volunteerFullName}</p>
                 </div>

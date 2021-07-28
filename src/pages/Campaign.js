@@ -59,11 +59,12 @@ return(
                         <ul class="nav nav-pills sort-source" data-sort-id="gallery" data-option-key="filter">
                             <li data-option-value="*" class="active"><a href="#"><i class="fa fa-th"></i> <span>Show All</span></a></li>
                             <li data-option-value=".education"><a href="#"><span>Education</span></a></li>
-                            <li data-option-value=".wild-life"><a href="#"><span>Wild Life</span></a></li>
                             <li data-option-value=".environment"><a href="#"><span>Environment</span></a></li>
-                            <li data-option-value=".water"><a href="#"><span>Water</span></a></li>
-                            <li data-option-value=".human-rights"><a href="#"><span>Human Rights</span></a></li>
-                            <li data-option-value=".small-business"><a href="#"><span>Small Business</span></a></li>
+                            <li data-option-value=".food"><a href="#"><span>Food</span></a></li>
+                            <li data-option-value=".funeral"><a href="#"><span>Funeral Expenses</span></a></li>
+                            <li data-option-value=".life"><a href="#"><span>Life Essential Necessity</span></a></li>
+                            <li data-option-value=".medical-expenses"><a href="#"><span>Medical Expenses</span></a></li>
+                            <li data-option-value=".other"><a href="#"><span>Others</span></a></li>
                         </ul>
                     </div>
                     <div class="row">

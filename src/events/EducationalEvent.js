@@ -22,7 +22,7 @@ class EducationalEvent extends Component{
 
 
     componentDidMount(){
-        axios.get("http://localhost:9000/event/display/education",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/event/display/education",this.state.config)
         .then((response)=>{
             this.setState({
                 events: response.data
@@ -45,7 +45,7 @@ render(){
             <li class="col-md-4 col-sm-6 grid-item event-grid-item education format-standard">
                 <div class="grid-item-inner">
                     <a href={"single-event/" + event._id} class="media-box">
-                        <img src={'http://localhost:9000/images/event/' + event.eventImage} alt="" />
+                        <img src={'https://helpinghand-backend.herokuapp.com/images/event/' + event.eventImage} alt="" />
                     </a>
                     
                     <div class="grid-item-content">

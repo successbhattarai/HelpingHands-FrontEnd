@@ -22,7 +22,7 @@ class EventGallery extends Component{
 
 
     componentDidMount(){
-        axios.get("http://localhost:9000/event/display",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/event/display",this.state.config)
         .then((response)=>{
             this.setState({
                 events: response.data
@@ -43,7 +43,7 @@ render(){
             this.state.events.map((event)=>{
             return(
             <li class="col-md-6 col-sm-6 col-xs-6 grid-item gallery-grid-item events format-image">
-                <a href={'http://localhost:9000/images/event/' + event.eventImage} class="media-box magnific-image"> <img src={'http://localhost:9000/images/event/' + event.eventImage} alt="" /> </a>
+                <a href={'https://helpinghand-backend.herokuapp.com/images/event/' + event.eventImage} class="media-box magnific-image"> <img src={'https://helpinghand-backend.herokuapp.com/images/event/' + event.eventImage} alt="" /> </a>
                 <div class="grid-item-content">
                     <p>{event.eventName}</p>
                 </div>

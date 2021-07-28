@@ -22,7 +22,7 @@ class BlogGallery extends Component{
 
 
     componentDidMount(){
-        axios.get("http://localhost:9000/blog/display",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/blog/display",this.state.config)
         .then((response)=>{
             this.setState({
                 blogs: response.data
@@ -43,7 +43,7 @@ render(){
             this.state.blogs.map((blog)=>{
             return(
             <li class="col-md-6 col-sm-6 col-xs-6 grid-item gallery-grid-item blogs format-image">
-                <a href={'http://localhost:9000/images/blog/' + blog.blogImage} class="media-box magnific-image"> <img src={'http://localhost:9000/images/blog/' + blog.blogImage} alt="" /> </a>
+                <a href={'https://helpinghand-backend.herokuapp.com/images/blog/' + blog.blogImage} class="media-box magnific-image"> <img src={'https://helpinghand-backend.herokuapp.com/images/blog/' + blog.blogImage} alt="" /> </a>
                 <div class="grid-item-content">
                     <p>{blog.blogTitle}</p>
                 </div>

@@ -32,7 +32,7 @@ class LoadBalance extends Component{
         const token = localStorage.getItem("token");
         const decodeToken = decode(token); 
         const userId = decodeToken.userId;
-        axios.get("http://localhost:9000/my-account/display/" + userId)
+        axios.get("https://helpinghand-backend.herokuapp.com/my-account/display/" + userId)
         .then((response)=>{
             this.setState({
                 userBalance: response.data.userBalance
@@ -46,7 +46,7 @@ class LoadBalance extends Component{
 
     HandleLoadBalance = (e)=>{
         e.preventDefault();
-        axios.put("http://localhost:9000/user/load-balance", this.state)
+        axios.put("https://helpinghand-backend.herokuapp.com/user/load-balance", this.state)
         .then((response)=>{
             console.log(response);
             toast('BALNCE LOADED : ' + this.state.userNewBalance)
