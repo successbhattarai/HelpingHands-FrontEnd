@@ -19,7 +19,7 @@ class AboutUs extends Component{
     }
 
     componentDidMount(){
-        axios.get("http://localhost:9000/volunteer/display",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/volunteer/display",this.state.config)
         .then((response)=>{
             this.setState({
                 volunteers: response.data

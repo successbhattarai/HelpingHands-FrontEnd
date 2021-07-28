@@ -24,7 +24,7 @@ class MyDonation extends Component{
 
 
     componentDidMount(){
-        axios.get("http://localhost:9000/blog/latest/limit=3",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/blog/latest/limit=3",this.state.config)
         .then((response)=>{
             this.setState({
                 blogs: response.data
@@ -38,7 +38,7 @@ class MyDonation extends Component{
         const token = localStorage.getItem("token");
         const decodeToken = decode(token); 
         const userId = decodeToken.userId;
-        axios.get("http://localhost:9000/my-donation/display/" + userId)
+        axios.get("https://helpinghand-backend.herokuapp.com/my-donation/display/" + userId)
         .then((response)=>{
             this.setState({
                 mydonations: response.data
@@ -128,7 +128,7 @@ return(
                                     return(
                                     <li>
                                         <a href={"single-post/" + blog._id} class="media-box">
-                                            <img src={'http://localhost:9000/images/blog/' + blog.blogImage} alt="" />
+                                            <img src={'https://helpinghand-backend.herokuapp.com/images/blog/' + blog.blogImage} alt="" />
                                         </a>
                                         <h5><a href={"single-post/" + blog._id}>{blog.blogTitle}</a></h5>
                                         <span class="meta-data grid-item-meta">Posted on {blog.blogPostDate}</span>

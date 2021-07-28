@@ -22,7 +22,7 @@ class Blog extends Component{
 
 
     componentDidMount(){
-        axios.get("http://localhost:9000/blog/display",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/blog/display",this.state.config)
         .then((response)=>{
             this.setState({
                 blogs: response.data
@@ -61,7 +61,7 @@ return(
                          <li class="col-md-4 col-sm-4 grid-item blog-grid-item format-standard">
                         <div class="grid-item-inner">
                             <a href={"single-post/" + blog._id} class="media-box">
-                                <img src={'http://localhost:9000/images/blog/' + blog.blogImage}  style={{width:"350px",height:"232px"}} alt=""/>
+                                <img src={'https://helpinghand-backend.herokuapp.com/images/blog/' + blog.blogImage}  style={{width:"350px",height:"232px"}} alt=""/>
                             </a>
                             <div class="grid-item-content">
                                 <h3 class="post-title"><a href={"single-post/" + blog._id}>{blog.blogTitle}</a></h3>

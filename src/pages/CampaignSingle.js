@@ -25,7 +25,7 @@ class CampaignSingle extends Component{
 
 
     componentDidMount(){
-        axios.get("http://localhost:9000/campaign/display/" + this.state.id)
+        axios.get("https://helpinghand-backend.herokuapp.com/campaign/display/" + this.state.id)
         .then((response)=>{
             this.setState({
                 campaignImage : response.data.campaignImage,
@@ -43,7 +43,7 @@ class CampaignSingle extends Component{
             console.log(error.response)
         })
 
-        axios.get("http://localhost:9000/campaign/latest/limit=3",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/campaign/latest/limit=3",this.state.config)
         .then((response)=>{
             this.setState({
                 campaigns: response.data
@@ -54,7 +54,7 @@ class CampaignSingle extends Component{
             console.log(error.response)
         })
 
-        axios.get("http://localhost:9000/blog/latest/limit=3",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/blog/latest/limit=3",this.state.config)
         .then((response)=>{
             this.setState({
                 blogs: response.data
@@ -89,7 +89,7 @@ return(
                     <div class="col-md-8 content-block">
                         <h3>Help rebuild Nepal</h3>
                         <div class="post-media">
-                            <img src={'http://localhost:9000/images/campaign/' + this.state.campaignImage} alt="" />
+                            <img src={'https://helpinghand-backend.herokuapp.com/images/campaign/' + this.state.campaignImage} alt="" />
                         </div>
                         <span class="label label-default">Cause progress</span>
                         <div class="progress">
@@ -123,7 +123,7 @@ return(
                                 return(
                                 <li>
                                     <a href="#" class="cause-thumb">
-                                        <img src={'http://localhost:9000/images/campaign/' + campaign.campaignImage} alt="" class="img-thumbnail" />
+                                        <img src={'https://helpinghand-backend.herokuapp.com/images/campaign/' + campaign.campaignImage} alt="" class="img-thumbnail" />
                                         <div class="cProgress" data-complete="88" data-color="42b8d4">
                                             <strong></strong>
                                         </div>
@@ -156,7 +156,7 @@ return(
                                 return(
                                 <li>
                                     <a href="single-post.html" class="media-box">
-                                        <img src={'http://localhost:9000/images/blog/' + blog.blogImage} alt="" />
+                                        <img src={'https://helpinghand-backend.herokuapp.com/images/blog/' + blog.blogImage} alt="" />
                                     </a>
                                     <h5><a href="single-post.html">{blog.blogTitle}</a></h5>
                                     <span class="meta-data grid-item-meta">Posted on {blog.blogPostDate}</span>

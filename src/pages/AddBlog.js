@@ -47,7 +47,7 @@ class AddBlog extends Component{
         formData.append('blogPostedBy', userId);
         formData.append('blogDetail', this.state.blogDetail);
 
-        axios.post("http://localhost:9000/blog/insert", formData, {
+        axios.post("https://helpinghand-backend.herokuapp.com/blog/insert", formData, {
 
             headers: {
                 Accept:'application/json',

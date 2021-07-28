@@ -55,7 +55,7 @@ class AddEvent extends Component{
         formData.append('eventFullDescription', this.state.eventFullDescription);
         formData.append('eventPostedBy', userId);
 
-        axios.post("http://localhost:9000/event/insert", formData, {
+        axios.post("https://helpinghand-backend.herokuapp.com/event/insert", formData, {
 
             headers: {
                 Accept:'application/json',

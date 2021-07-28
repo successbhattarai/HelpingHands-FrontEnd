@@ -23,7 +23,7 @@ class Events extends Component{
 
 
     componentDidMount(){
-        axios.get("http://localhost:9000/event/display",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/event/display",this.state.config)
         .then((response)=>{
             this.setState({
                 events: response.data

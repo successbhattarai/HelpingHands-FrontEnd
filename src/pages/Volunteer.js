@@ -49,7 +49,7 @@ class Volunteer extends Component{
         formData.append('volunteerPostalCode', this.state.volunteerPostalCode);
         formData.append('volunteerNationality', this.state.volunteerNationality);
 
-        axios.post("http://localhost:9000/volunteer/register", formData, {
+        axios.post("https://helpinghand-backend.herokuapp.com/volunteer/register", formData, {
 
             headers: {
                 Accept:'application/json',

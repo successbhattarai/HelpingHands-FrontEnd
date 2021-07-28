@@ -33,7 +33,7 @@ class Register extends Component{
     handleSubmitRegister = (e)=>{
         
         e.preventDefault();
-        axios.post("http://localhost:9000/user/register", {
+        axios.post("https://helpinghand-backend.herokuapp.com/user/register", {
             userFullName:this.state.userFullName,
             userContactNumber:this.state.userContactNumber,
             userEmailAddress:this.state.userEmailAddress,

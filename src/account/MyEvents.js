@@ -24,7 +24,7 @@ class MyEvents extends Component{
 
 
     componentDidMount(){
-        axios.get("http://localhost:9000/campaign/latest/limit=3",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/campaign/latest/limit=3",this.state.config)
         .then((response)=>{
             this.setState({
                 campaigns: response.data
@@ -38,7 +38,7 @@ class MyEvents extends Component{
         const token = localStorage.getItem("token");
         const decodeToken = decode(token); 
         const userId = decodeToken.userId;
-        axios.get("http://localhost:9000/my-event/display/" + userId)
+        axios.get("https://helpinghand-backend.herokuapp.com/my-event/display/" + userId)
         .then((response)=>{
             this.setState({
                 myevents: response.data
@@ -132,7 +132,7 @@ return(
                                 return(
                                 <li>
                                     <a href="#" class="cause-thumb">
-                                        <img src={'http://localhost:9000/images/campaign/' + campaign.campaignImage} alt="" class="img-thumbnail" />
+                                        <img src={'https://helpinghand-backend.herokuapp.com/images/campaign/' + campaign.campaignImage} alt="" class="img-thumbnail" />
                                         <div class="cProgress" data-complete="88" data-color="42b8d4">
                                             <strong></strong>
                                         </div>

@@ -20,7 +20,7 @@ class BlogSingle extends Component{
 
 
     componentDidMount(){
-        axios.get("http://localhost:9000/blog/display/" + this.state.id)
+        axios.get("https://helpinghand-backend.herokuapp.com/blog/display/" + this.state.id)
         .then((response)=>{
             this.setState({
                 blogImage : response.data.blogImage,
@@ -35,7 +35,7 @@ class BlogSingle extends Component{
             console.log(error.response)
         })
         
-        axios.get("http://localhost:9000/blog/latest/limit=3",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/blog/latest/limit=3",this.state.config)
         .then((response)=>{
             this.setState({
                 blogs: response.data
@@ -71,7 +71,7 @@ return(
                     <div class="col-md-8 content-block">
                         <h3>{this.state.blogTitle}</h3>
                         <div class="post-media">
-                            <img src={'http://localhost:9000/images/blog/' + this.state.blogImage} alt="" />
+                            <img src={'https://helpinghand-backend.herokuapp.com/images/blog/' + this.state.blogImage} alt="" />
                         </div>
                         <div class="post-content">
                             <p>{this.state.blogDescription}</p>
@@ -198,7 +198,7 @@ return(
                                     return(
                                     <li>
                                         <a href={"single-post/" + blog._id} class="media-box">
-                                            <img src={'http://localhost:9000/images/blog/' + blog.blogImage} alt="" />
+                                            <img src={'https://helpinghand-backend.herokuapp.com/images/blog/' + blog.blogImage} alt="" />
                                         </a>
                                         <h5><a href={"single-post/" + blog._id}>{blog.blogTitle}</a></h5>
                                         <span class="meta-data grid-item-meta">Posted on {blog.blogPostDate}</span>

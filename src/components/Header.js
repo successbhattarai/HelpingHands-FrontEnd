@@ -19,7 +19,7 @@ class Header extends Component{
     }
 
     componentDidMount(){
-        axios.get("http://localhost:9000/blog/latest/limit=3",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/blog/latest/limit=3",this.state.config)
         .then((response)=>{
             this.setState({
                 blogs: response.data
@@ -30,7 +30,7 @@ class Header extends Component{
             console.log(error.response)
         })
 
-        axios.get("http://localhost:9000/campaign/latest/limit=3",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/campaign/latest/limit=3",this.state.config)
         .then((response)=>{
             this.setState({
                 campaigns: response.data
@@ -41,7 +41,7 @@ class Header extends Component{
             console.log(error.response)
         })
 
-        axios.get("http://localhost:9000/event/display/limit=3",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/event/display/limit=3",this.state.config)
         .then((response)=>{
             this.setState({
                 events: response.data
@@ -141,7 +141,7 @@ render(){
                                                         return(
                                                         <li>
                                                             <a href="single-post.html" class="media-box">
-                                                                <img src={'http://localhost:9000/images/blog/' + blog.blogImage} alt="" />
+                                                                <img src={'https://helpinghand-backend.herokuapp.com/images/blog/' + blog.blogImage} alt="" />
                                                             </a>
                                                             <h5><a href="single-post.html">{blog.blogTitle}</a></h5>
                                                             <span class="meta-data grid-item-meta">Posted on {blog.blogPostDate}</span>
@@ -160,7 +160,7 @@ render(){
                                                     return(
                                                     <li>
                                                         <a href="#" class="cause-thumb">
-                                                            <img src={'http://localhost:9000/images/campaign/' + campaign.campaignImage} alt="" class="img-thumbnail" />
+                                                            <img src={'https://helpinghand-backend.herokuapp.com/images/campaign/' + campaign.campaignImage} alt="" class="img-thumbnail" />
                                                             <div class="cProgress" data-complete="88" data-color="42b8d4">
                                                                 <strong></strong>
                                                             </div>
@@ -181,7 +181,7 @@ render(){
                                                     return(
                                                     <li>
                                                         <a href="#" class="cause-thumb">
-                                                            <img src={'http://localhost:9000/images/event/' + event.eventImage} alt="" class="img-thumbnail" />
+                                                            <img src={'https://helpinghand-backend.herokuapp.com/images/event/' + event.eventImage} alt="" class="img-thumbnail" />
                                                             <div class="cProgress" data-complete="88" data-color="42b8d4">
                                                                 <strong></strong>
                                                             </div>
@@ -285,7 +285,7 @@ render(){
                                                         return(
                                                         <li>
                                                             <a href="single-post.html" class="media-box">
-                                                                <img src={'http://localhost:9000/images/blog/' + blog.blogImage} alt="" />
+                                                                <img src={'https://helpinghand-backend.herokuapp.com/images/blog/' + blog.blogImage} alt="" />
                                                             </a>
                                                             <h5><a href="single-post.html">{blog.blogTitle}</a></h5>
                                                             <span class="meta-data grid-item-meta">Posted on {blog.blogPostDate}</span>
@@ -306,7 +306,7 @@ render(){
                                                     return(
                                                     <li>
                                                         <a href="#" class="cause-thumb">
-                                                            <img src={'http://localhost:9000/images/campaign/' + campaign.campaignImage} alt="" class="img-thumbnail" />
+                                                            <img src={'https://helpinghand-backend.herokuapp.com/images/campaign/' + campaign.campaignImage} alt="" class="img-thumbnail" />
                                                             <div class="cProgress" data-complete="88" data-color="42b8d4">
                                                                 <strong></strong>
                                                             </div>
