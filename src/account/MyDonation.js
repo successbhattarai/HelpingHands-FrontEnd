@@ -78,18 +78,10 @@ return(
                             return(
                             <li class="causes-list-item cause-item">
                             	<div class="row">
-                                	{/* <div class="col-md-4 col-sm-4 list-thumb">
-                                        <a href="single-cause.html">
-                                            <img src="images/causeg1.jpg" alt=""/>
-                                        </a>
-                                       	<div class="cause-progress"><a class="cProgress" data-complete="88" data-color="F23827" data-toggle="tooltip" data-original-title="10 days left" data-placement="left"><strong></strong></a></div>
-                                    </div> */}
                                     <div class="col-md-8 col-sm-8">
                                         <div class="cause-list-item-cont">
-                                            <h3 class="post-title"><a href="single-cause.html">CAUSE</a></h3>
-                                            {/* <p>Lorem ipsum dolor sit amet, consectet adipiscing elit. Nam malesuada dapi bus diam, ut fringilla purus efficitur  eget...</p> */}
-                                            <div class="meta-data">Donated NPR. {donation.donorDonated}
-                                            {/* <span class="cause-target">$30000</span> */}
+                                            <h3 class="post-title"><a href="single-cause.html">{donation.campaignName}</a></h3>
+                                             <div class="meta-data">Donated NPR. {donation.donorDonated}
                                             </div>
                                         </div>
                                     </div>

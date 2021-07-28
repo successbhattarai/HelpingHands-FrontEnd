@@ -3,7 +3,6 @@ import axios from 'axios';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from '../components/Footer';
-import DonateModal from '../components/DonateModal';
 
 toast.configure();
 
@@ -109,7 +108,7 @@ return(
                                     <li class="list-group-item">Days left to fundraising<span class="badge">{this.state.campaignDays}</span></li>
                                     <li class="list-group-item">Countries helping<span class="badge">0</span></li>
                                 </ul>
-                                <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#DonateModal">Donate Now</a>
+                                <a href={"donate-now/" + this.state.id}  class="btn btn-primary btn-block">Donate Now</a>
                             </div>
                         </div>
                         <p>{this.state.campaignFullDescription}</p>
@@ -172,8 +171,6 @@ return(
             </div>
         </div>
     </div>
-    
-    <DonateModal></DonateModal>
     
     
     <Footer></Footer>

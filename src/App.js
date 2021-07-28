@@ -33,6 +33,7 @@ import MyBlog from './account/MyBlog';
 import MyDonation from './account/MyDonation';
 import MyCampaign from './account/MyCampaign';
 import MyEvents from './account/MyEvents';
+import DonateNow from './pages/DonateNow';
 
 function App() {
   return (
@@ -66,6 +67,8 @@ function App() {
       <Route path='/privacy-policy' exact component={PrivacyPolicy} />
       <Route path='/payment-terms' exact component={PaymentTerms} />
       <Route path='/refund-policy' exact component={RefundPolicy} />
+      <Route path='/donate-now/:id' exact component={DonateNow} />
+      <Route path='/single-cause/donate-now/:id' exact component={DonateNow} />
       <Route path='/my-blogs/:id' exact component={MyBlog} />
       <Route path='/my-campaigns/:id' exact component={MyCampaign} />
       <Route path='/my-events/:id' exact component={MyEvents} />

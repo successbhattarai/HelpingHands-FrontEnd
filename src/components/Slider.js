@@ -53,7 +53,7 @@ return(
                                     <h3><a href="#">Save Siyona</a></h3>
                                     <p>Siyona Shrestha a 13 months old Nepali baby girl from has been fighting for her life. She has been diagnosed with a rare fatal genetic disease called Spinal Muscular Atrophy.</p>
                                     <span class="meta-data">Collected : <span class="cause-target">11 Crore 60 Lakhs</span></span>
-                                    <a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#DonateModal">Donate</a>
+                                    <a href="causes" class="btn btn-primary btn-lg">Donate</a>
                                 </div>
                             </div>
                         </div>

@@ -51,7 +51,7 @@ render(){
                         <a class="cProgress" data-complete="88" data-color="F23827" data-toggle="tooltip" data-original-title="10 days left"><strong></strong></a>
                         <h3 class="post-title"><a href={"single-cause/" + campaign._id}>{campaign.campaignName}</a></h3>
                         <div class="meta-data">Donated NPR 0 / <span class="cause-target">NPR {campaign.campaignGoal}</span></div>
-                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#DonateModal">Donate Now</a>
+                        <a href={"donate-now/" + campaign._id}  class="btn btn-primary">Donate Now</a>
                     </div>
                 </div>
             </li>

@@ -7,7 +7,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Slider from '../components/Slider';
 import Footer from '../components/Footer';
 import UrgentPost from '../components/UrgentPost';
-import DonateModal from '../components/DonateModal';
 import UpcommingEvents from '../components/UpcommingEvents';
 import GalleryUpdate from '../components/GalleryUpdate';
 import Counters from '../components/Counters';
@@ -137,8 +136,6 @@ return(
     </div>
     
     <Footer></Footer>
-    
-    <DonateModal></DonateModal>
 </div>
 )}
 
