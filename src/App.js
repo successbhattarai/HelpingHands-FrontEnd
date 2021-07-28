@@ -34,6 +34,7 @@ import MyDonation from './account/MyDonation';
 import MyCampaign from './account/MyCampaign';
 import MyEvents from './account/MyEvents';
 import DonateNow from './pages/DonateNow';
+import LoadBalance from './pages/LoadBalance';
 
 function App() {
   return (
@@ -73,6 +74,7 @@ function App() {
       <Route path='/my-campaigns/:id' exact component={MyCampaign} />
       <Route path='/my-events/:id' exact component={MyEvents} />
       <Route path='/my-donations/:id' exact component={MyDonation} />
+      <Route path='/load-balance/:id' exact component={LoadBalance} />
       </BrowserRouter>
  </div>
   );
