@@ -28,7 +28,7 @@ class OurImpact extends Component{
     }
 
     componentDidMount(){
-        axios.get("http://localhost:9000/volunteer/display",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/volunteer/display",this.state.config)
         .then((response)=>{
             this.setState({
                 volunteers: response.data,
@@ -40,7 +40,7 @@ class OurImpact extends Component{
             console.log(error.response)
         })
 
-        axios.get("http://localhost:9000/campaign/display",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/campaign/display",this.state.config)
         .then((response)=>{
             this.setState({
                 campaigns: response.data,
@@ -52,7 +52,7 @@ class OurImpact extends Component{
             console.log(error.response)
         })
 
-        axios.get("http://localhost:9000/user/display",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/user/display",this.state.config)
         .then((response)=>{
             this.setState({
                 users: response.data,
@@ -65,7 +65,7 @@ class OurImpact extends Component{
         })
 
         
-        axios.get("http://localhost:9000/donation/display",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/donation/display",this.state.config)
         .then((response)=>{
             this.setState({
                 donations: response.data,

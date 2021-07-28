@@ -23,7 +23,7 @@ class Home extends Component{
     }
 
     componentDidMount(){
-        axios.get("http://localhost:9000/blog/latest/limit=2",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/blog/latest/limit=2",this.state.config)
         .then((response)=>{
             this.setState({
                 blogs: response.data
@@ -110,7 +110,7 @@ return(
                                     <div class="grid-item blog-grid-item format-standard">
                                         <div class="grid-item-inner">
                                             <a href="single-event.html" class="media-box">
-                                                <img src={'http://localhost:9000/images/blog/' + blog.blogImage} style={{width:"360px",height:"240px"}} alt="" />
+                                                <img src={'https://helpinghand-backend.herokuapp.com/images/blog/' + blog.blogImage} style={{width:"360px",height:"240px"}} alt="" />
                                             </a>
                                             <div class="grid-item-content">
                                                 <h3 class="post-title"><a href="single-post.html">{blog.blogTitle}</a></h3>

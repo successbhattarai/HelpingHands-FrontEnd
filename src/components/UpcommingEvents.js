@@ -22,7 +22,7 @@ class UpcommingEvents extends Component{
 
 
     componentDidMount(){
-        axios.get("http://localhost:9000/event/display/limit=3",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/event/display/limit=3",this.state.config)
         .then((response)=>{
             this.setState({
                 events: response.data

@@ -51,7 +51,7 @@ class AddCampaign extends Component{
         formData.append('campaignFullDescription', this.state.campaignFullDescription);
         formData.append('campaignPostedBy', userId);
 
-        axios.post("http://localhost:9000/campaign/insert", formData, {
+        axios.post("https://helpinghand-backend.herokuapp.com/campaign/insert", formData, {
 
             headers: {
                 Accept:'application/json',

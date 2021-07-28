@@ -23,7 +23,7 @@ class GalleryUpdate extends Component{
 
 
     componentDidMount(){
-        axios.get("http://localhost:9000/event/display/limit=3",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/event/display/limit=3",this.state.config)
         .then((response)=>{
             this.setState({
                 events: response.data
@@ -34,7 +34,7 @@ class GalleryUpdate extends Component{
             console.log(error.response)
         })
 
-        axios.get("http://localhost:9000/campaign/display/limit=3",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/campaign/display/limit=3",this.state.config)
         .then((response)=>{
             this.setState({
                 campaigns: response.data
@@ -55,7 +55,7 @@ render(){
             this.state.events.map((event)=>{
                 return(
                     <li class="format-image grid-item">
-                        <a src={'http://localhost:9000/images/event/' + event.eventImage} class="media-box magnific-image"> <img src={'http://localhost:9000/images/event/' + event.eventImage} alt="" /> </a>
+                        <a src={'https://helpinghand-backend.herokuapp.com/images/event/' + event.eventImage} class="media-box magnific-image"> <img src={'https://helpinghand-backend.herokuapp.com/images/event/' + event.eventImage} alt="" /> </a>
                     </li>
                 )
             })
@@ -65,7 +65,7 @@ render(){
             this.state.campaigns.map((campaign)=>{
                 return(
                     <li class="format-image grid-item">
-                        <a src={'http://localhost:9000/images/campaign/' + campaign.campaignImage} class="media-box magnific-image"> <img src={'http://localhost:9000/images/campaign/' + campaign.campaignImage} alt="" /> </a>
+                        <a src={'https://helpinghand-backend.herokuapp.com/images/campaign/' + campaign.campaignImage} class="media-box magnific-image"> <img src={'https://helpinghand-backend.herokuapp.com/images/campaign/' + campaign.campaignImage} alt="" /> </a>
                     </li>
                 )
             })

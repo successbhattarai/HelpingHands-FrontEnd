@@ -22,7 +22,7 @@ class MedicalExpensesCampaign extends Component{
 
 
     componentDidMount(){
-        axios.get("http://localhost:9000/campaign/display/medical-expenses",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/campaign/display/medical-expenses",this.state.config)
         .then((response)=>{
             this.setState({
                 campaigns: response.data
@@ -44,7 +44,7 @@ render(){
             <li class="col-md-4 col-sm-6 grid-item cause-grid-item medical-expenses format-standard">
                 <div class="grid-item-inner">
                     <a href={"single-cause/" + campaign._id}  class="media-box">
-                        <img src={'http://localhost:9000/images/campaign/' + campaign.campaignImage} style={{width:"358px",height:"238px"}} alt=""/>
+                        <img src={'https://helpinghand-backend.herokuapp.com/images/campaign/' + campaign.campaignImage} style={{width:"358px",height:"238px"}} alt=""/>
                     </a>
                     <div class="grid-item-content">
                         <a class="cProgress" data-complete="88" data-color="F23827" data-toggle="tooltip" data-original-title="10 days left"><strong></strong></a>

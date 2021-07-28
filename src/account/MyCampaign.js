@@ -24,7 +24,7 @@ class MyCampaign extends Component{
 
 
     componentDidMount(){
-        axios.get("http://localhost:9000/campaign/latest/limit=3",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/campaign/latest/limit=3",this.state.config)
         .then((response)=>{
             this.setState({
                 campaigns: response.data
@@ -38,7 +38,7 @@ class MyCampaign extends Component{
         const token = localStorage.getItem("token");
         const decodeToken = decode(token); 
         const userId = decodeToken.userId;
-        axios.get("http://localhost:9000/my-campaign/display/" + userId)
+        axios.get("https://helpinghand-backend.herokuapp.com/my-campaign/display/" + userId)
         .then((response)=>{
             this.setState({
                 mycampaigns: response.data
@@ -80,7 +80,7 @@ return(
                             	<div class="row">
                                 	<div class="col-md-4 col-sm-4 list-thumb">
                                         <a href="single-cause.html">
-                                            <img src={'http://localhost:9000/images/campaign/' + campaign.campaignImage} alt=""/>
+                                            <img src={'https://helpinghand-backend.herokuapp.com/images/campaign/' + campaign.campaignImage} alt=""/>
                                         </a>
                                        	<div class="cause-progress"><a class="cProgress" data-complete="88" data-color="F23827" data-toggle="tooltip" data-original-title="10 days left" data-placement="left"><strong></strong></a></div>
                                     </div>
@@ -134,7 +134,7 @@ return(
                                     return(
                                     <li>
                                         <a href={"single-post/" + campaign._id} class="media-box">
-                                            <img src={'http://localhost:9000/images/campaign/' + campaign.campaignImage} alt="" />
+                                            <img src={'https://helpinghand-backend.herokuapp.com/images/campaign/' + campaign.campaignImage} alt="" />
                                         </a>
                                         <h5><a href={"single-post/" + campaign._id}>{campaign.campaignName}</a></h5>
                                         <span class="meta-data grid-item-meta">Posted on {campaign.campaignPostDate}</span>

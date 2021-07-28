@@ -24,7 +24,7 @@ class Campaign extends Component{
 
 
     componentDidMount(){
-        axios.get("http://localhost:9000/campaign/display",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/campaign/display",this.state.config)
         .then((response)=>{
             this.setState({
                 campaigns: response.data

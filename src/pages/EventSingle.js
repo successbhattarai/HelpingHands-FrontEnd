@@ -26,7 +26,7 @@ class EventSingle extends Component{
 
 
     componentDidMount(){
-        axios.get("http://localhost:9000/event/display/" + this.state.id)
+        axios.get("https://helpinghand-backend.herokuapp.com/event/display/" + this.state.id)
         .then((response)=>{
             this.setState({
                 eventImage : response.data.eventImage,
@@ -47,7 +47,7 @@ class EventSingle extends Component{
         })
 
         
-        axios.get("http://localhost:9000/blog/latest/limit=3",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/blog/latest/limit=3",this.state.config)
         .then((response)=>{
             this.setState({
                 blogs: response.data
@@ -83,7 +83,7 @@ return(
                     <div class="col-md-8 content-block">
                         <h3>{this.state.eventName}</h3>
                         <div class="post-media">
-                            <img src={'http://localhost:9000/images/event/' + this.state.eventImage} alt="" />
+                            <img src={'https://helpinghand-backend.herokuapp.com/images/event/' + this.state.eventImage} alt="" />
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
@@ -168,7 +168,7 @@ return(
                                 return(
                                 <li>
                                     <a href="single-post.html" class="media-box">
-                                        <img src={'http://localhost:9000/images/blog/' + blog.blogImage} alt="" />
+                                        <img src={'https://helpinghand-backend.herokuapp.com/images/blog/' + blog.blogImage} alt="" />
                                     </a>
                                     <h5><a href="single-post.html">{blog.blogTitle}</a></h5>
                                     <span class="meta-data grid-item-meta">Posted on {blog.blogPostDate}</span>

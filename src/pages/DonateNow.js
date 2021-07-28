@@ -43,7 +43,7 @@ class DonateNow extends Component{
 
 
     componentDidMount(){
-        axios.get("http://localhost:9000/campaign/display/" + this.state.id)
+        axios.get("https://helpinghand-backend.herokuapp.com/campaign/display/" + this.state.id)
         .then((response)=>{
             this.setState({
                 campaignImage : response.data.campaignImage,
@@ -64,7 +64,7 @@ class DonateNow extends Component{
         const token = localStorage.getItem("token");
         const decodeToken = decode(token); 
         const userId = decodeToken.userId;
-        axios.get("http://localhost:9000/my-account/display/" + userId)
+        axios.get("https://helpinghand-backend.herokuapp.com/my-account/display/" + userId)
         .then((response)=>{
             this.setState({
                 userFullName: response.data.userFullName,
@@ -90,7 +90,7 @@ class DonateNow extends Component{
         const token = localStorage.getItem("token");
         const decodeToken = decode(token); 
         const userId = decodeToken.userId;
-        axios.post("http://localhost:9000/donate", {
+        axios.post("https://helpinghand-backend.herokuapp.com/donate", {
             
             campaignId:this.state.id,
             campaignName:this.state.campaignName,
