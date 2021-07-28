@@ -167,10 +167,10 @@ return(
                                 this.state.blogs.map((blog)=>{
                                 return(
                                 <li>
-                                    <a href="single-post.html" class="media-box">
+                                    <a href={"single-post/" + blog._id} class="media-box">
                                         <img src={'https://helpinghand-backend.herokuapp.com/images/blog/' + blog.blogImage} alt="" />
                                     </a>
-                                    <h5><a href="single-post.html">{blog.blogTitle}</a></h5>
+                                    <h5><a href={"single-post/" + blog._id}>{blog.blogTitle}</a></h5>
                                     <span class="meta-data grid-item-meta">Posted on {blog.blogPostDate}</span>
                                 </li>
                                 )

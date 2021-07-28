@@ -122,13 +122,13 @@ return(
                                 this.state.campaigns.map((campaign)=>{
                                 return(
                                 <li>
-                                    <a href="#" class="cause-thumb">
+                                    <a href={"single-cause/" + campaign._id} class="cause-thumb">
                                         <img src={'https://helpinghand-backend.herokuapp.com/images/campaign/' + campaign.campaignImage} alt="" class="img-thumbnail" />
                                         <div class="cProgress" data-complete="88" data-color="42b8d4">
                                             <strong></strong>
                                         </div>
                                     </a>
-                                    <h5><a href="single-cause.html">{campaign.campaignName}</a></h5>
+                                    <h5><a href={"single-cause/" + campaign._id}>{campaign.campaignName}</a></h5>
                                     <span class="meta-data">{campaign.campaignDays} days left to achieve</span>
                                 </li>
                                 )
@@ -155,10 +155,10 @@ return(
                                 this.state.blogs.map((blog)=>{
                                 return(
                                 <li>
-                                    <a href="single-post.html" class="media-box">
+                                    <a href={"single-post/" + blog._id} class="media-box">
                                         <img src={'https://helpinghand-backend.herokuapp.com/images/blog/' + blog.blogImage} alt="" />
                                     </a>
-                                    <h5><a href="single-post.html">{blog.blogTitle}</a></h5>
+                                    <h5><a href={"single-post/" + blog._id}>{blog.blogTitle}</a></h5>
                                     <span class="meta-data grid-item-meta">Posted on {blog.blogPostDate}</span>
                                 </li>
                                 )

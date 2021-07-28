@@ -128,13 +128,13 @@ return(
                                 this.state.campaigns.map((campaign)=>{
                                 return(
                                 <li>
-                                    <a href="#" class="cause-thumb">
+                                    <a href={"single-cause/" + campaign._id} class="cause-thumb">
                                         <img src={'https://helpinghand-backend.herokuapp.com/images/campaign/' + campaign.campaignImage} alt="" class="img-thumbnail" />
                                         <div class="cProgress" data-complete="88" data-color="42b8d4">
                                             <strong></strong>
                                         </div>
                                     </a>
-                                    <h5><a href="single-cause.html">{campaign.campaignName}</a></h5>
+                                    <h5><a href={"single-cause/" + campaign._id}>{campaign.campaignName}</a></h5>
                                     <span class="meta-data">{campaign.campaignDays} days left to achieve</span>
                                 </li>
                                 )

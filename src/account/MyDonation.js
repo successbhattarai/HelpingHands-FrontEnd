@@ -80,7 +80,7 @@ return(
                             	<div class="row">
                                     <div class="col-md-8 col-sm-8">
                                         <div class="cause-list-item-cont">
-                                            <h3 class="post-title"><a href="single-cause.html">{donation.campaignName}</a></h3>
+                                            <h3 class="post-title"><a>{donation.campaignName}</a></h3>
                                              <div class="meta-data">Donated NPR. {donation.donorDonated}
                                             </div>
                                         </div>

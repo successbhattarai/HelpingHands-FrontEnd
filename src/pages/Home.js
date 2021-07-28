@@ -109,11 +109,11 @@ return(
                                 <li class="item" style={{float:"left"}}>
                                     <div class="grid-item blog-grid-item format-standard">
                                         <div class="grid-item-inner">
-                                            <a href="single-event.html" class="media-box">
+                                            <a  href={"single-post/" + blog._id} class="media-box">
                                                 <img src={'https://helpinghand-backend.herokuapp.com/images/blog/' + blog.blogImage} style={{width:"360px",height:"240px"}} alt="" />
                                             </a>
                                             <div class="grid-item-content">
-                                                <h3 class="post-title"><a href="single-post.html">{blog.blogTitle}</a></h3>
+                                                <h3 class="post-title"><a href={"single-post/" + blog._id}>{blog.blogTitle}</a></h3>
                                                 <span class="meta-data">Posted on 11th Dec, 2015</span>
                                             </div>
                                         </div>
