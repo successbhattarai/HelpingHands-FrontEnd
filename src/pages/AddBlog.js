@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Input } from'reactstrap';
 import Header from '../components/Header';
 import {toast} from 'react-toastify';
+import decode from 'jwt-decode';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from '../components/Footer';
 
@@ -17,6 +18,7 @@ class AddBlog extends Component{
         blogTitle :'',
         blogDescription :'',
         blogTags :'',
+        blogPostedBy: '',
         blogDetail :'',
     }
     
@@ -35,10 +37,14 @@ class AddBlog extends Component{
     AddBlog = (e)=>{
         e.preventDefault();
         const formData = new FormData();
+        const token = localStorage.getItem("token");
+        const decodeToken = decode(token); 
+        const userId = decodeToken.userId;
         formData.append('blogImage', this.state.blogImage);
         formData.append('blogTitle', this.state.blogTitle);
         formData.append('blogDescription', this.state.blogDescription);
         formData.append('blogTags', this.state.blogTags);
+        formData.append('blogPostedBy', userId);
         formData.append('blogDetail', this.state.blogDetail);
 
         axios.post("http://localhost:9000/blog/insert", formData, {

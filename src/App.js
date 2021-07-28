@@ -29,6 +29,7 @@ import PaymentTerms from './pages/PaymentTerms';
 import RefundPolicy from './pages/RefundPolicy';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import FAQ from './pages/Faq';
+import MyBlog from './account/MyBlog';
 
 function App() {
   return (
@@ -62,6 +63,9 @@ function App() {
       <Route path='/privacy-policy' exact component={PrivacyPolicy} />
       <Route path='/payment-terms' exact component={PaymentTerms} />
       <Route path='/refund-policy' exact component={RefundPolicy} />
+      <Route path='/my-blog/:id' exact component={MyBlog} />
+      <Route path='/my-events/:id' exact component={MyBlog} />
+      <Route path='/my-donations/:id' exact component={MyBlog} />
       </BrowserRouter>
  </div>
   );

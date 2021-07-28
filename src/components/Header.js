@@ -204,13 +204,13 @@ render(){
                                 <li><a href="add-blog">ADD BLOG</a></li>
                             </ul>
                         </li>
-                        <li><a href="">Account</a>
+                        <li><a>My Account</a>
                             <ul>
                                 <li><a href="">Update Profile</a></li>
-                                <li><a href="">Balance Status</a></li>
-                                <li><a href="">Donation History</a></li>
-                                <li><a href="">Blog History</a></li>
-                                <li><a href="">Event History</a></li>
+                                <li><a href="">Load Balance</a></li>
+                                <li><a href={'/my-donations/'+ decode(localStorage.getItem("token")).userId}>My Donations</a></li>
+                                <li><a href={'/my-blog/'+ decode(localStorage.getItem("token")).userId}>My Blogs</a></li>
+                                <li><a href={'/my-events/'+ decode(localStorage.getItem("token")).userId}>My Events</a></li>
                             </ul>
                         </li>
                     </ul>
