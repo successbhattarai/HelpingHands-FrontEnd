@@ -79,14 +79,14 @@ return(
                             <li class="causes-list-item cause-item">
                             	<div class="row">
                                 	<div class="col-md-4 col-sm-4 list-thumb">
-                                        <a href="single-cause.html">
+                                        <a href={'single-cause/' + campaign._id}>
                                             <img src={'https://helpinghand-backend.herokuapp.com/images/campaign/' + campaign.campaignImage} alt=""/>
                                         </a>
                                        	<div class="cause-progress"><a class="cProgress" data-complete="88" data-color="F23827" data-toggle="tooltip" data-original-title="10 days left" data-placement="left"><strong></strong></a></div>
                                     </div>
                                     <div class="col-md-8 col-sm-8">
                                         <div class="cause-list-item-cont">
-                                            <h3 class="post-title"><a href="single-cause.html">{campaign.campaignName}</a></h3>
+                                            <h3 class="post-title"><a href={'single-cause/' + campaign._id}>{campaign.campaignName}</a></h3>
                                             <p>{campaign.campaignShortDescription}</p>
                                             <div class="meta-data">Campaign Goal <span class="cause-target">NPR {campaign.campaignGoal}</span></div>
                                         </div>
