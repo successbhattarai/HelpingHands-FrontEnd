@@ -158,12 +158,13 @@ return(
                                 	<div class="col-md-6 col-sm-6 col-xs-6">
                             			<label>Categories</label>
                                         <Input type="select" name="eventCategories" id="eventCategories" value={this.state.eventCategories} onChange={this.handleStringChange} required="required">
-                                            <option value="Education">Education</option>
-                                            <option value="Environment">Environment</option>
-                                            <option value="Human Rights">Human Rights</option>
-                                            <option value="Students">Students</option>
-                                            <option value="Water">Water</option>
-                                            <option value="Wildlife">Wildlife</option>
+                                            <option value="Entertainment">Entertainment Events</option>
+                                            <option value="Social">Social Events</option>
+                                            <option value="Sports">Sports Event</option>
+                                            <option value="Religious">Religious Events</option>
+                                            <option value="Educational">Educational Events</option>
+                                            <option value="Political">Political</option>
+                                            <option value="Charitable">Charitable Events</option>
                                             <option value="Others">Others</option>
                                         </Input>
                                 	</div>
@@ -176,9 +177,6 @@ return(
                                 <label>Full Description</label>
                             	<input type="text" placeholder="Full Description*"  id="eventFullDescription" name="eventFullDescription" value={this.state.eventFullDescription} onChange={this.handleStringChange} class="form-control"/>
                             	
-                               
-                            	
-                                
                                 <input type="submit" id="AddEvent" onClick={this.AddEvent} class="btn btn-primary" value="Submit Event"/>
                                 <div class="spacer-10"></div>
                             </form>

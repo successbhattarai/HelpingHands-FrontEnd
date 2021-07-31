@@ -8,7 +8,13 @@ import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Slider from '../components/Slider';
 import Footer from '../components/Footer';
-import EducationalEvent from '../events/EducationalEvent';
+import Educational from '../events/Educational';
+import Entertainment from '../events/Entertainment';
+import Sports from '../events/Sports';
+import Religious from '../events/Religious';
+import Political from '../events/Political';
+import Charitable from '../events/Charitable';
+import Others from '../events/Others';
 
 toast.configure();
 
@@ -57,16 +63,24 @@ return(
                     <div class="grid-filter">
                         <ul class="nav nav-pills sort-source" data-sort-id="gallery" data-option-key="filter">
                             <li data-option-value="*" class="active"><a href="#"><i class="fa fa-th"></i> <span>Show All</span></a></li>
-                            <li data-option-value=".education"><a href="#"><span>Education</span></a></li>
-                            <li data-option-value=".wild-life"><a href="#"><span>Wild Life</span></a></li>
-                            <li data-option-value=".environment"><a href="#"><span>Environment</span></a></li>
-                            <li data-option-value=".water"><a href="#"><span>Water</span></a></li>
-                            <li data-option-value=".human-rights"><a href="#"><span>Human Rights</span></a></li>
+                            <li data-option-value=".Entertainment"><a href="#"><span>Entertainment</span></a></li>
+                            <li data-option-value=".Sports"><a href="#"><span>Sports</span></a></li>
+                            <li data-option-value=".Religious"><a href="#"><span>Religious</span></a></li>
+                            <li data-option-value=".Educational"><a href="#"><span>Educational</span></a></li>
+                            <li data-option-value=".Political"><a href="#"><span>Political</span></a></li>
+                            <li data-option-value=".Charitable"><a href="#"><span>Charitable</span></a></li>
+                            <li data-option-value=".Others"><a href="#"><span>Others</span></a></li>
                         </ul>
                     </div>
                     <div class="row">
                     <ul class="sort-destination isotope gallery-items" data-sort-id="gallery">
-                        <EducationalEvent></EducationalEvent>
+                        <Entertainment></Entertainment>
+                        <Sports></Sports>
+                        <Religious></Religious>
+                        <Educational></Educational>
+                        <Political></Political>
+                        <Charitable></Charitable>
+                        <Others></Others>
                     </ul>
 
                     </div>
