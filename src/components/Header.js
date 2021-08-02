@@ -64,10 +64,10 @@ render(){
             <header class="site-header sticky">
                 <div class="container">
                     <div class="site-logo">
-                        <a href="/" class="default-logo"><img src="http://localhost:3000/images/logo2.png" alt="Logo" /></a>
-                        <a href="/" class="default-retina-logo"><img src="http://localhost:3000/images/logo2.png" alt="Logo" width="199" height="30" /></a>
-                        <a href="/" class="sticky-logo"><img src="http://localhost:3000/images/logo.png" alt="Logo" /></a>
-                        <a href="/" class="sticky-retina-logo"><img src="http://localhost:3000/images/logo2.png" alt="Logo" width="199" height="30" /></a>
+                        <a href="/" class="default-logo"><img src="images/logo2.png" alt="Logo" /></a>
+                        <a href="/" class="default-retina-logo"><img src="images/logo2.png" alt="Logo" width="199" height="30" /></a>
+                        <a href="/" class="sticky-logo"><img src="images/logo.png" alt="Logo" /></a>
+                        <a href="/" class="sticky-retina-logo"><img src="images/logo2.png" alt="Logo" width="199" height="30" /></a>
                     </div>
                     <a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
                     <div class="header-info-col"><i class="fa fa-phone"></i>01-4425661, 01-4441577</div>
@@ -226,10 +226,10 @@ render(){
             <header class="site-header sticky">
                 <div class="container">
                     <div class="site-logo">
-                        <a href="/" class="default-logo"><img src="http://localhost:3000/images/logo2.png" alt="Logo" /></a>
-                        <a href="/" class="default-retina-logo"><img src="http://localhost:3000/images/logo2.png" alt="Logo" width="199" height="30" /></a>
-                        <a href="/" class="sticky-logo"><img src="http://localhost:3000/images/logo.png" alt="Logo" /></a>
-                        <a href="/" class="sticky-retina-logo"><img src="http://localhost:3000/images/logo2.png" alt="Logo" width="199" height="30" /></a>
+                        <a href="/" class="default-logo"><img src="images/logo2.png" alt="Logo" /></a>
+                        <a href="/" class="default-retina-logo"><img src="images/logo2.png" alt="Logo" width="199" height="30" /></a>
+                        <a href="/" class="sticky-logo"><img src="images/logo.png" alt="Logo" /></a>
+                        <a href="/" class="sticky-retina-logo"><img src="images/logo2.png" alt="Logo" width="199" height="30" /></a>
                     </div>
                     <a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
                     <div class="header-info-col"><i class="fa fa-phone"></i> 01-4425661, 01-4441577</div>
