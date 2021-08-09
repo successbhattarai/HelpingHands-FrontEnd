@@ -17,7 +17,6 @@ class Register extends Component{
         super(props)
         this.state = {
             userFullName:"",
-            
             userEmailAddress : "",
             userPassword : "",
             userConfirmPassword:""
