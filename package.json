@@ -4,6 +4,9 @@
   "private": true,
   "description": "Helping Hands Frontend",
   "main": "index.js",
+  "engines": {
+    "node": "14.4.3"
+  },
   "dependencies": {
     "axios": "^0.21.1",
     "jwt-decode": "^3.1.2",
