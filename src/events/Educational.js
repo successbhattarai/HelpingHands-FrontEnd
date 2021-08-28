@@ -29,7 +29,7 @@ class Educational extends Component{
             })
         })
         .catch((error)=>{
-            toast('ERROR DISPLAYING EVENT')
+            toast('ERROR DISPLAYING EDUCATIONAL EVENT')
             console.log(error.response)
         })
     }

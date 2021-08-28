@@ -29,6 +29,7 @@ class MedicalExpensesCampaign extends Component{
             })
         })
         .catch((error)=>{
+            toast('ERROR DISPLAYING MEDICAL EXPENSES CAMPAIGN')
             console.log(error.response)
         })
     }

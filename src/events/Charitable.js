@@ -29,7 +29,7 @@ class Charitable extends Component{
             })
         })
         .catch((error)=>{
-            toast('ERROR DISPLAYING EVENT')
+            toast('ERROR DISPLAYING CHARITABLE EVENT')
             console.log(error.response)
         })
     }

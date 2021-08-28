@@ -29,6 +29,7 @@ class EducationCampaign extends Component{
             })
         })
         .catch((error)=>{
+            toast('ERROR DISPLAYING EDUCATIONAL CAMPAIGN')
             console.log(error.response)
         })
     }

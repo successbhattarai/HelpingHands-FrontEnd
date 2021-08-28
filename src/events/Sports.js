@@ -29,7 +29,7 @@ class Sports extends Component{
             })
         })
         .catch((error)=>{
-            toast('ERROR DISPLAYING EVENT')
+            toast('ERROR DISPLAYING SPORTS EVENT')
             console.log(error.response)
         })
     }

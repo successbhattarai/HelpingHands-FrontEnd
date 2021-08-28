@@ -29,6 +29,7 @@ class LifeEssentialsCampaign extends Component{
             })
         })
         .catch((error)=>{
+            toast('ERROR DISPLAYING LIFE ESSENTIALS CAMPAIGN')
             console.log(error.response)
         })
     }

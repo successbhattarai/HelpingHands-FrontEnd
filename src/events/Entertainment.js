@@ -29,7 +29,7 @@ class Entertainment extends Component{
             })
         })
         .catch((error)=>{
-            toast('ERROR DISPLAYING EVENT')
+            toast('ERROR DISPLAYING ENTERTAINMENT EVENT')
             console.log(error.response)
         })
     }

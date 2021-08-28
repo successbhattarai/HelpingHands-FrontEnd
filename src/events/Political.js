@@ -29,7 +29,7 @@ class Political extends Component{
             })
         })
         .catch((error)=>{
-            toast('ERROR DISPLAYING EVENT')
+            toast('ERROR DISPLAYING POLITICAL EVENT')
             console.log(error.response)
         })
     }

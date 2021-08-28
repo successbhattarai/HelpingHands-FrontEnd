@@ -23,6 +23,7 @@ class EnvironmentCampaign extends Component{
             })
         })
         .catch((error)=>{
+            toast('ERROR DISPLAYING ENVIRONMENT CAMPAIGN')
             console.log(error.response)
         })
     }

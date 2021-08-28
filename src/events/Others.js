@@ -29,7 +29,7 @@ class Others extends Component{
             })
         })
         .catch((error)=>{
-            toast('ERROR DISPLAYING EVENT')
+            toast('ERROR DISPLAYING OTHERS EVENT')
             console.log(error.response)
         })
     }

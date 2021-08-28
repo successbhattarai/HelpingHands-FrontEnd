@@ -29,6 +29,7 @@ class OthersCampaign extends Component{
             })
         })
         .catch((error)=>{
+            toast('ERROR DISPLAYING OTHERS CAMPAIGN')
             console.log(error.response)
         })
     }

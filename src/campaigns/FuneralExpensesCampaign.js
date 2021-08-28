@@ -29,6 +29,7 @@ class FuneralExpensesCampaign extends Component{
             })
         })
         .catch((error)=>{
+            toast('ERROR DISPLAYING FUNERAL EXPENSES CAMPAIGN')
             console.log(error.response)
         })
     }
