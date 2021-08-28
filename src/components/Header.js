@@ -277,9 +277,9 @@ render(){
                                                 </ul>
                                             </div>
                                             <div class="col-md-3 megamenu-col">
-                                                <span class="megamenu-sub-title"><i class="fa fa-newspaper-o"></i> Latest news</span>
+                                                <span class="megamenu-sub-title"><i class="fa fa-newspaper-o"></i> Latest Blogs</span>
                                                 <div class="widget recent_posts">
-                                                    {/* <ul>
+                                                    <ul>
                                                         {
                                                         this.state.blogs.map((blog)=>{
                                                         return(
@@ -293,35 +293,50 @@ render(){
                                                         )
                                                         })
                                                         }
-                                                    </ul> */}
+                                                    </ul>
                                                 </div>
-                                                
                                             </div>
                                             <div class="col-md-3 megamenu-col">
-                                                <span class="megamenu-sub-title"><i class="fa fa-microphone"></i> Latest causes</span>
-                                                
-                                                {/* <ul class="widget_recent_causes">
+                                                <span class="megamenu-sub-title"><i class="fa fa-image"></i> Latest Causes</span>
+                                                <ul class="widget_recent_causes">
                                                     {
                                                     this.state.campaigns.map((campaign)=>{
                                                     return(
                                                     <li>
-                                                        <a href="#" class="cause-thumb">
+                                                        <a href={"single-cause/" + campaign._id} class="cause-thumb">
                                                             <img src={'https://helpinghand-backend.herokuapp.com/images/campaign/' + campaign.campaignImage} alt="" class="img-thumbnail" />
                                                             <div class="cProgress" data-complete="88" data-color="42b8d4">
                                                                 <strong></strong>
                                                             </div>
                                                         </a>
-                                                        <h5><a href={"single-event/" + event._id}>{campaign.campaignName}</a></h5>
+                                                        <h5><a href={"single-cause/" + campaign._id}>{campaign.campaignName}</a></h5>
                                                         <span class="meta-data">{campaign.campaignDays} days left to achieve</span>
                                                     </li>
                                                     )
                                                     })
                                                     }
-                                                </ul> */}
+                                                </ul>
                                             </div>
                                             <div class="col-md-3 megamenu-col">
-                                                <span class="megamenu-sub-title"><i class="fa fa-star"></i> Featured Video</span>
-                                                <div class="fw-video"><iframe src="https://player.vimeo.com/video/62947247" width="500px" height="275px"></iframe></div>
+                                                <span class="megamenu-sub-title"><i class="fa fa-star"></i> Latest Events</span>
+                                                <ul class="widget_recent_causes">
+                                                    {
+                                                    this.state.events.map((event)=>{
+                                                    return(
+                                                    <li>
+                                                        <a href="#" class="cause-thumb">
+                                                            <img src={'https://helpinghand-backend.herokuapp.com/images/event/' + event.eventImage} alt="" class="img-thumbnail" />
+                                                            <div class="cProgress" data-complete="88" data-color="42b8d4">
+                                                                <strong></strong>
+                                                            </div>
+                                                        </a>
+                                                        <h5><a href={"single-event/" + event._id}>{event.eventName}</a></h5>
+                                                        <span class="meta-data">{event.eventAttendees} Attendees</span>
+                                                    </li>
+                                                    )
+                                                    })
+                                                    }
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>

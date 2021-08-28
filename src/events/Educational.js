@@ -22,7 +22,7 @@ class Educational extends Component{
 
 
     componentDidMount(){
-        axios.get("https://helpinghand-backend.herokuapp.com/event/display/educational",this.state.config)
+        axios.get("https://helpinghand-backend.herokuapp.com/event/display/education",this.state.config)
         .then((response)=>{
             this.setState({
                 events: response.data

@@ -73,16 +73,15 @@ return(
                         </ul>
                     </div>
                     <div class="row">
-                    <ul class="sort-destination isotope gallery-items" data-sort-id="gallery">
-                        <Entertainment></Entertainment>
-                        <Sports></Sports>
-                        <Religious></Religious>
-                        <Educational></Educational>
-                        <Political></Political>
-                        <Charitable></Charitable>
-                        <Others></Others>
-                    </ul>
-
+                        <ul class="sort-destination isotope gallery-items" data-sort-id="gallery">
+                            <Entertainment></Entertainment>
+                            <Sports></Sports>
+                            <Religious></Religious>
+                            <Educational></Educational>
+                            <Political></Political>
+                            <Charitable></Charitable>
+                            <Others></Others>
+                        </ul>
                     </div>
                     
                     <nav>
